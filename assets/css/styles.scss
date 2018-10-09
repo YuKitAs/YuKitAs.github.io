@@ -15,16 +15,15 @@ body {
   width: 50vw;
   height: auto;
   margin-top: 50px;
-  border-radius: 5px;
-  transition-duration: 1.5s;
+  border: .5rem solid white;
 }
 
-.img-home:first-of-type {
-  position: absolute;
-}
-
-.img-home:first-of-type:hover {
-  opacity: 0;
+/* Mobile phones */
+@media only screen and (max-width: 768px) {
+  .img-home {
+    width: 80vw;
+    height: auto;
+  }
 }
 
 .category {
