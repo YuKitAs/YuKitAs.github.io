@@ -26,12 +26,12 @@ body {
   }
 }
 
-.category {
+.nav {
   font-family: sans-serif;
   font-size: 20px;
 }
 
-.cat-label:focus {
+.nav-item:focus {
   color: $text-color-primary;
 }
 
@@ -42,4 +42,8 @@ a {
 
 a:hover {
   color: $text-color-primary;
+}
+
+.placeholder-text {
+  margin-top: 50px;
 }
