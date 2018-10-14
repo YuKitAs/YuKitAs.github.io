@@ -12,8 +12,8 @@ body {
   text-align: center;
 }
 
-.img-home {
-  width: 50vw;
+img#home {
+  width: 40vw;
   height: auto;
   margin-top: 50px;
   border: .5rem solid white;
@@ -66,7 +66,7 @@ a:hover {
 
 /* Mobile phones */
 @media only screen and (max-width: 768px) {
-  .img-home {
+  img#home {
     width: 80vw;
     height: auto;
   }

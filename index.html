@@ -22,6 +22,10 @@
     </div>
   </head>
   <body>
-      <img class="img-home" src="/assets/images/home.png">
+      <img id="home" src="/assets/images/home-before.png">
+
+      <script>
+        window.onload = () => setTimeout(() => document.querySelector("#home").setAttribute("src", "/assets/images/home-after.png"), 5000);
+      </script>
   </body>
 </html>
