@@ -1,5 +1,6 @@
 ---
 ---
+@import "photos";
 
 $bg-color: #24292e; // black
 $text-color-primary: #fff; // white
@@ -16,14 +17,6 @@ body {
   height: auto;
   margin-top: 50px;
   border: .5rem solid white;
-}
-
-/* Mobile phones */
-@media only screen and (max-width: 768px) {
-  .img-home {
-    width: 80vw;
-    height: auto;
-  }
 }
 
 .nav {
@@ -46,4 +39,39 @@ a:hover {
 
 .placeholder-text {
   margin-top: 50px;
+}
+
+.container {
+  width: 1024px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.label {
+  margin-bottom: .2rem;
+  font-family: sans-serif;
+  color: $text-color-primary;
+}
+
+.label:hover {
+  text-decoration: underline;
+}
+
+/* Tablets */
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 515px !important;
+  }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 768px) {
+  .img-home {
+    width: 80vw;
+    height: auto;
+  }
+
+  .container {
+    width: 250px !important;
+  }
 }

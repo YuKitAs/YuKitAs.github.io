@@ -16,12 +16,33 @@
     <h1>Konnichiwa Sekai!</h1>
     <div class="nav">
       <a href="/"><span class="nav-item">Home</span></a> |
-      <a href="/photos"><span class="nav-item">Photo</span></a> |
-      <a href="/drawings"><span class="nav-item">Drawing</span></a> |
+      <a href="/photos"><span class="nav-item">Photos</span></a> |
+      <a href="/drawings"><span class="nav-item">Drawings</span></a> |
       <a href="/about"><span class="nav-item">About</span></a>
     </div>
   </head>
   <body>
-    <div class="placeholder-text">Under construction</div>
+    <div class="container">
+      <div class="label"><a href="/photos/squirrels">#squirrels</a></div>
+      <div class="thumbnails"></div>
+
+      <div class="label">#raccons</div>
+      <div class="thumbnails"></div>
+    </div>
+
+
+    <script>
+      window.onload = function renderThumbnails() {
+        document.querySelectorAll(".thumbnails").forEach(t => {
+          for (let i = 0; i < 4; i++) {
+            let thumbnail = document.createElement("img");
+            thumbnail.setAttribute("class", "thumbnail");
+            const path = `resources/photo-placeholder-${i + 1}.png`;
+            thumbnail.setAttribute("src", path);
+            t.appendChild(thumbnail);
+          }
+        });
+      }
+    </script>
   </body>
 </html>
