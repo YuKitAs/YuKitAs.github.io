@@ -1,3 +1,5 @@
+$photo-thumbnail-size: 250px;
+
 .thumbnails {
   width: inherit;
   margin: .2rem 0 2rem;
@@ -6,8 +8,8 @@
 }
 
 .thumbnail-card {
-  width: 250px;
-  height: 250px;
+  width: $photo-thumbnail-size;
+  height: $photo-thumbnail-size;
   border: .15rem solid transparent;
   position: relative;
   text-align: center;
@@ -28,6 +30,7 @@
 .thumbnail {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 .thumbnail-card:hover .thumbnail {
@@ -36,4 +39,23 @@
 
 .thumbnail-card:hover .zoom-icon {
   opacity: 1;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+#photo-details {
+  margin: 10% auto;
+}
+
+#original-photo {
+  border: .5rem solid white;
 }
