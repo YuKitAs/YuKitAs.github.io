@@ -35,11 +35,20 @@
       window.onload = () => {
         document.querySelectorAll(".thumbnails").forEach(t => {
           for (let i = 0; i < 4; i++) {
+            let card = document.createElement("span");
+            card.setAttribute("class", "thumbnail-card");
+
+            let zoomIcon = document.createElement("img");
+            zoomIcon.setAttribute("class", "zoom-icon");
+            zoomIcon.setAttribute("src", "/assets/icons/zoom.png");
+
             let thumbnail = document.createElement("img");
             thumbnail.setAttribute("class", "thumbnail");
-            const path = `resources/photo-placeholder-${i + 1}.png`;
-            thumbnail.setAttribute("src", path);
-            t.appendChild(thumbnail);
+            thumbnail.setAttribute("src", `resources/photo-placeholder-${i + 1}.png`);
+
+            card.append(zoomIcon);
+            card.append(thumbnail);
+            t.appendChild(card);
           }
         });
       }

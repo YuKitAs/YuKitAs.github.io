@@ -1,6 +1,39 @@
-.thumbnail {
+.thumbnails {
+  width: inherit;
+  margin: .2rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail-card {
   width: 250px;
-  height: auto;
-  margin-bottom: .5rem;
+  height: 250px;
   border: .15rem solid transparent;
+  position: relative;
+  text-align: center;
+}
+
+.zoom-icon {
+  width: 40px;
+  height: auto;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail-card:hover .thumbnail {
+  opacity: .3;
+}
+
+.thumbnail-card:hover .zoom-icon {
+  opacity: 1;
 }
