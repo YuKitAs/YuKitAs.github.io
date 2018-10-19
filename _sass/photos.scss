@@ -92,3 +92,19 @@ $photo-thumbnail-size: 250px;
 #photo-details:hover .close {
   opacity: 1;
 }
+
+/* Mobile phones */
+@media only screen and (max-width: 768px) {
+  #photo-details {
+    display: inline-block;
+  }
+
+  #photo-details:hover .close {
+    opacity: 0;
+  }
+
+  #original-photo {
+    width: 90vw;
+    height: 90vw;
+  }
+}
