@@ -27,7 +27,6 @@
       <div class="thumbnails"></div>
 
       <div class="label">#raccons</div>
-      <div class="thumbnails"></div>
     </div>
 
     <div id="modal">
@@ -52,12 +51,12 @@
 
             let thumbnail = document.createElement("img");
             thumbnail.setAttribute("class", "thumbnail");
-            let thumbnailName = `photo-placeholder-${i + 1}`;
-            thumbnail.setAttribute("src", `resources/thumbnails/${thumbnailName}.png`);
+            let thumbnailName = `resources/squirrels/photo-placeholder-${i + 1}`;
+            thumbnail.setAttribute("src", `${thumbnailName}.png`);
             thumbnail.addEventListener("click", () => {
               modal.style.display = "block";
 
-              document.querySelector("#original-photo").setAttribute("src", `resources/${thumbnailName}.png`);
+              document.querySelector("#original-photo").setAttribute("src", `${thumbnailName}-raw.png`);
             });
 
             card.append(zoomIcon);
