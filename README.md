@@ -1,9 +1,11 @@
 # YuKitAs.github.io
 
-Build the site locally with Jekyll:
+Local:
 
-```console
-$ bundle exec jekyll serve
-```
+1. Build with Jekyll:
 
-Visit `http://localhost:4000` in browser
+  ```console
+  $ bundle exec jekyll serve
+  ```
+
+2. Visit `http://localhost:4000` in browser
