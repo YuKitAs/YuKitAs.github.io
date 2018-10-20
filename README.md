@@ -8,4 +8,4 @@ Local:
   $ bundle exec jekyll serve
   ```
 
-2. Visit `http://localhost:4000` in browser
+2. Visit `http://localhost:4000`
