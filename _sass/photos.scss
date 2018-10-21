@@ -50,6 +50,7 @@ $photo-thumbnail-size: 250px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .4);
+  touch-action: none;
 }
 
 .photo-details {
@@ -90,8 +91,9 @@ $photo-thumbnail-size: 250px;
   border: none;
   border-radius: 50%;
   background-color: white;
-  display: inline-block;
-  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 1000;
@@ -115,10 +117,6 @@ $photo-thumbnail-size: 250px;
 @media only screen and (max-width: 768px) {
   .photo-details {
     display: inline-block;
-  }
-
-  .close {
-    opacity: 0;
   }
 
   .photo-overlay {
