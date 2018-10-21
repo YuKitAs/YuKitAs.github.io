@@ -86,31 +86,9 @@ $photo-thumbnail-size: 250px;
 }
 
 .close {
-  width: 1.5rem;
-  height: 1.5rem;
-  border: none;
-  border-radius: 50%;
-  background-color: white;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 1000;
-  font-family: sans-serif;
-  color: rgba(0, 0, 0, .7);
-  line-height: 1.5rem;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .4);
-  --webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .4);
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-}
-
-.close:focus {
-  outline: 0;
-}
-
-.close:hover {
-  background-color: #bfbfbf;
 }
 
 /* Mobile phones */
