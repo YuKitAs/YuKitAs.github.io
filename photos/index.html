@@ -81,11 +81,13 @@
         });
       }
 
-      window.onclick = e => {
-        if (e.target === modal) {
-          closeModal();
-        }
-      }
+      ["click", "touchstart"].forEach(event => {
+        window.addEventListener(event, e => {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+      });
 
       function closeModal() {
         modal.style.display = "none";
