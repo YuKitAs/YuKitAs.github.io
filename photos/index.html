@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="manifest" href="/site.webmanifest">
+    <script src="json_loader.js"></script>
     <title>Erleuchtung - YuKitAs</title>
 
     <h1>Konnichiwa Sekai!</h1>
@@ -31,7 +32,13 @@
 
     <div id="modal">
       <div id="photo-details">
-        <img id="original-photo">
+        <div class="photo-container">
+          <img id="original-photo" />
+          <div class="photo-overlay">
+            <div id="date"></div>
+            <div id="location"></div>
+          </div>
+        </div>
         <button class="button close" onclick="closeModal()">×</button>
       </div>
     </div>
@@ -41,28 +48,36 @@
 
       window.onload = () => {
         document.querySelectorAll(".thumbnails").forEach(t => {
-          for (let i = 0; i < 4; i++) {
-            let card = document.createElement("span");
-            card.setAttribute("class", "thumbnail-card");
+          load("squirrels").then(data => {
+            const squirrels = JSON.parse(data).photos;
+            squirrels.reverse();
 
-            let zoomIcon = document.createElement("img");
-            zoomIcon.setAttribute("class", "zoom-icon");
-            zoomIcon.setAttribute("src", "/assets/icons/zoom.png");
+            for (let i = 0; i < 4; i++) {
+              let card = document.createElement("span");
+              card.setAttribute("class", "thumbnail-card");
 
-            let thumbnail = document.createElement("img");
-            thumbnail.setAttribute("class", "thumbnail");
-            let thumbnailName = `resources/squirrels/photo-placeholder-${i + 1}`;
-            thumbnail.setAttribute("src", `${thumbnailName}.png`);
-            thumbnail.addEventListener("click", () => {
-              modal.style.display = "block";
+              let zoomIcon = document.createElement("img");
+              zoomIcon.setAttribute("class", "zoom-icon");
+              zoomIcon.setAttribute("src", "/assets/icons/zoom.png");
 
-              document.querySelector("#original-photo").setAttribute("src", `${thumbnailName}-raw.png`);
-            });
+              let thumbnail = document.createElement("img");
+              thumbnail.setAttribute("class", "thumbnail");
+              let thumbnailName = `resources/squirrels/${squirrels[i].name}`;
+              thumbnail.setAttribute("src", `${thumbnailName}.png`);
+              thumbnail.addEventListener("click", () => {
+                modal.style.display = "block";
 
-            card.append(zoomIcon);
-            card.append(thumbnail);
-            t.appendChild(card);
-          }
+                document.querySelector("#original-photo").setAttribute("src", `${thumbnailName}-raw.png`);
+                let dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
+                document.querySelector("#date").textContent = new Date(squirrels[i].date).toLocaleDateString("en-US", dateFormat);
+                document.querySelector("#location").textContent = squirrels[i].location;
+              });
+
+              card.append(zoomIcon);
+              card.append(thumbnail);
+              t.appendChild(card);
+            }
+          });
         });
       }
 
