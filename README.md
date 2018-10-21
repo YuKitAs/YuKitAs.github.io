@@ -9,3 +9,5 @@ Local:
   ```
 
 2. Visit `http://localhost:4000`
+
+Tested on Chrome 69, Firefox 62, Safari 12.
