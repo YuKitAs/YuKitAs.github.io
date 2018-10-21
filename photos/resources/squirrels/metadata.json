@@ -1,29 +1,29 @@
 {
-  "squirrels": [
+  "photos": [
     {
       "id": 1,
-      "name": "photo-place-holder-1",
+      "name": "photo-placeholder-1",
       "date": "2018-01-01",
       "location": "Karlsruhe, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 2,
-      "name": "photo-place-holder-2",
+      "name": "photo-placeholder-2",
       "date": "2018-01-02",
       "location": "Karlsruhe, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 3,
-      "name": "photo-place-holder-3",
+      "name": "photo-placeholder-3",
       "date": "2018-01-03",
       "location": "Karlsruhe, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 4,
-      "name": "photo-place-holder-4",
+      "name": "photo-placeholder-4",
       "date": "2018-01-04",
       "location": "Karlsruhe, Germany",
       "camera": "Canon EOS 60D"
