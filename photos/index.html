@@ -25,9 +25,10 @@
   <body>
     <div class="container">
       <div class="label"><a href="/photos/squirrels">#squirrels</a></div>
-      <div class="thumbnails"></div>
+      <div class="thumbnails squirrels"></div>
 
-      <div class="label">#raccons</div>
+      <div class="label">#raccoons</div>
+      <div class="thumbnails raccoons"></div>
     </div>
 
     <div class="modal" id="modal">
@@ -47,10 +48,12 @@
       var modal = document.querySelector("#modal");
 
       window.onload = () => {
-        document.querySelectorAll(".thumbnails").forEach(t => {
-          load("squirrels").then(data => {
-            const squirrels = JSON.parse(data).photos;
-            squirrels.reverse();
+        document.querySelectorAll("[class^='thumbnails']").forEach(t => {
+          const tag = t.className.slice(11);
+
+          load(tag).then(data => {
+            const photos = JSON.parse(data).photos;
+            photos.reverse();
 
             for (let i = 0; i < 4; i++) {
               let card = document.createElement("span");
@@ -62,15 +65,15 @@
 
               let thumbnail = document.createElement("img");
               thumbnail.setAttribute("class", "thumbnail");
-              let thumbnailName = `resources/squirrels/${squirrels[i].name}`;
+              let thumbnailName = `resources/${tag}/${photos[i].name}`;
               thumbnail.setAttribute("src", `${thumbnailName}.png`);
               thumbnail.addEventListener("click", () => {
                 modal.style.display = "block";
 
                 document.querySelector("#original-photo").setAttribute("src", `${thumbnailName}-raw.png`);
                 let dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
-                document.querySelector("#date").textContent = new Date(squirrels[i].date).toLocaleDateString("en-US", dateFormat);
-                document.querySelector("#location").textContent = squirrels[i].location;
+                document.querySelector("#date").textContent = new Date(photos[i].date).toLocaleDateString("en-US", dateFormat);
+                document.querySelector("#location").textContent = photos[i].location;
               });
 
               card.append(zoomIcon);
