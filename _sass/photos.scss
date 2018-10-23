@@ -54,7 +54,12 @@ $photo-thumbnail-size: 250px;
 }
 
 .photo-details {
-  margin: 5% auto;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
 }
@@ -93,10 +98,34 @@ $photo-thumbnail-size: 250px;
 
 .close-icon {
   fill: white;
+  opacity: .5;
 }
 
 .close-button:hover .close-icon {
+  opacity: 1;
+}
+
+.arrow {
+  width: 64px;
+  height: auto;
+  position: absolute;
+  top:50%;
+  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
   opacity: .5;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
 }
 
 /* Mobile phones */
@@ -115,7 +144,11 @@ $photo-thumbnail-size: 250px;
   }
 
   .original-photo {
-    width: 90vw;
+    width: 80vw;
     height: auto;
+  }
+
+  .arrow {
+    display: none;
   }
 }
