@@ -2,29 +2,50 @@
   "photos": [
     {
       "id": 1,
-      "name": "photo-placeholder-1",
-      "date": "2018-01-01",
+      "name": "squirrel-1",
+      "date": "2016-03-13",
       "location": "Karlsruhe, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 2,
-      "name": "photo-placeholder-2",
-      "date": "2018-02-03",
+      "name": "squirrel-2",
+      "date": "2016-03-13",
       "location": "Karlsruhe, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 3,
-      "name": "photo-placeholder-3",
-      "date": "2018-03-04",
+      "name": "squirrel-3",
+      "date": "2017-03-12",
       "location": "Karlsruhe, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 4,
-      "name": "photo-placeholder-4",
-      "date": "2018-04-05",
+      "name": "squirrel-4",
+      "date": "2017-03-12",
+      "location": "Karlsruhe, Germany",
+      "camera": "Canon EOS 60D"
+    },
+    {
+      "id": 5,
+      "name": "squirrel-5",
+      "date": "2017-03-12",
+      "location": "Karlsruhe, Germany",
+      "camera": "Canon EOS 60D"
+    },
+    {
+      "id": 6,
+      "name": "squirrel-6",
+      "date": "2018-04-07",
+      "location": "Karlsruhe, Germany",
+      "camera": "Canon EOS 60D"
+    },
+    {
+      "id": 7,
+      "name": "squirrel-7",
+      "date": "2018-04-07",
       "location": "Karlsruhe, Germany",
       "camera": "Canon EOS 60D"
     }
