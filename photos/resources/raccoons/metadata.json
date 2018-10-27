@@ -2,30 +2,44 @@
   "photos": [
     {
       "id": 1,
-      "name": "photo-placeholder-1",
-      "date": "2018-05-06",
-      "location": "Karlsruhe, Germany",
+      "name": "raccoon-1",
+      "date": "2017-09-10",
+      "location": "Pforzheim, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 2,
-      "name": "photo-placeholder-2",
-      "date": "2018-06-07",
-      "location": "Karlsruhe, Germany",
+      "name": "raccoon-2",
+      "date": "2018-07-30",
+      "location": "Worms, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 3,
-      "name": "photo-placeholder-3",
-      "date": "2018-07-08",
-      "location": "Karlsruhe, Germany",
+      "name": "raccoon-3",
+      "date": "2018-07-30",
+      "location": "Worms, Germany",
       "camera": "Canon EOS 60D"
     },
     {
       "id": 4,
-      "name": "photo-placeholder-4",
-      "date": "2018-08-09",
-      "location": "Karlsruhe, Germany",
+      "name": "raccoon-4",
+      "date": "2018-07-30",
+      "location": "Worms, Germany",
+      "camera": "Canon EOS 60D"
+    },
+    {
+      "id": 5,
+      "name": "raccoon-5",
+      "date": "2018-10-07",
+      "location": "Waldkirch, Germany",
+      "camera": "Canon EOS 60D"
+    },
+    {
+      "id": 6,
+      "name": "raccoon-6",
+      "date": "2018-10-07",
+      "location": "Waldkirch, Germany",
       "camera": "Canon EOS 60D"
     }
   ]
