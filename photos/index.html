@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="manifest" href="/site.webmanifest">
-    <script src="json_loader.js"></script>
+    <script src="data_loader.js"></script>
     <title>Erleuchtung - YuKitAs</title>
 
     <h1>Konnichiwa Sekai!</h1>
@@ -24,11 +24,11 @@
   </head>
   <body>
     <div class="container">
-      <div class="label">#squirrels</div>
-      <div class="thumbnails squirrels"></div>
+      <div class="label"><a href="squirrels">#squirrels</a></div>
+      <div class="thumbnails" id="squirrels"></div>
 
-      <div class="label">#raccoons</div>
-      <div class="thumbnails raccoons"></div>
+      <div class="label"><a href="raccoons">#raccoons</a></div>
+      <div class="thumbnails" id="raccoons"></div>
     </div>
 
     <div class="modal" id="modal">
@@ -57,9 +57,9 @@
       var leftArrow = document.querySelector("#left");
       var rightArrow = document.querySelector("#right");
 
-      var photos = [];
       var photoDetailsView = {
-        currentTag: "squirrels",
+        currentTag: "",
+        currentPhotos: [],
         _currentIndex: 0,
         get currentIndex() {
           return this._currentIndex;
@@ -78,8 +78,9 @@
             this.currentIndex++;
           });
         },
-        display(tag, index) {
+        display(tag, photos, index) {
           this.currentTag = tag;
+          this.currentPhotos = photos;
           this.currentIndex = index;
           modal.style.display = "block";
         },
@@ -87,29 +88,28 @@
           modal.style.display = "none";
         },
         _setOriginalPhoto() {
-          originalPhoto.setAttribute("src", `resources/${this.currentTag}/${photos[this.currentIndex].name}-raw.jpg`);
+          let photos = this.currentPhotos;
+          let i = this.currentIndex;
+          originalPhoto.setAttribute("src", `resources/${this.currentTag}/${photos[i].name}-raw.jpg`);
+
+          let dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
+          document.querySelector("#date").textContent = new Date(photos[i].date).toLocaleDateString("en-US", dateFormat);
+          document.querySelector("#location").textContent = photos[i].location;
         },
         _displayArrows(index) {
-          if (index === 0) {
-            leftArrow.style.display = "none";
-          } else if (index === 3) {
-            rightArrow.style.display = "none";
-          } else {
-            leftArrow.style.display = "block";
-            rightArrow.style.display = "block";
-          }
+          leftArrow.style.display = index === 0 ? "none" : "block";
+          rightArrow.style.display = index === 3 ? "none" : "block";
         }
       };
 
       window.onload = () => {
         photoDetailsView.addEventListenerOnLoad();
 
-        document.querySelectorAll("[class^='thumbnails']").forEach(t => {
-          const tag = t.className.slice(11);
-
-          load(tag).then(data => {
-            photos = JSON.parse(data).photos;
-            photos.reverse();
+        load().then(metadata => {
+          JSON.parse(metadata).data.forEach(photosByTag => {
+            const tag = photosByTag.name;
+            const photos = photosByTag.photos.reverse();
+            var thumbnailsDOM = document.querySelector(`#${tag}`);
 
             for (let i = 0; i < 4; i++) {
               let card = document.createElement("span");
@@ -119,23 +119,19 @@
               zoomIcon.setAttribute("class", "zoom-icon");
               zoomIcon.setAttribute("src", "/assets/icons/zoom.png");
 
-              let thumbnail = document.createElement("img");
-              thumbnail.setAttribute("class", "thumbnail");
+              let thumbnailDOM = document.createElement("img");
+              thumbnailDOM.setAttribute("class", "thumbnail");
               let thumbnailName = `resources/${tag}/${photos[i].name}`;
-              thumbnail.setAttribute("src", `${thumbnailName}.jpg`);
-              thumbnail.addEventListener("click", () => {
-                photoDetailsView.display(tag, i);
-
-                let dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
-                document.querySelector("#date").textContent = new Date(photos[i].date).toLocaleDateString("en-US", dateFormat);
-                document.querySelector("#location").textContent = photos[i].location;
+              thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
+              thumbnailDOM.addEventListener("click", () => {
+                photoDetailsView.display(tag, photos, i);
               });
 
               card.append(zoomIcon);
-              card.append(thumbnail);
-              t.appendChild(card);
+              card.append(thumbnailDOM);
+              thumbnailsDOM.appendChild(card);
             }
-          });
+          })
         });
       }
 

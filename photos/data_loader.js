@@ -1,5 +1,5 @@
-function load(name) {
-  const url = `https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/photos/resources/${name}/metadata.json`;
+function load() {
+  const url = `https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/photos/metadata.json`;
 
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
