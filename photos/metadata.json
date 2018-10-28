@@ -1,0 +1,105 @@
+{
+  "photos": [
+    {
+      "name": "squirrels",
+      "data": [
+        {
+          "id": 1,
+          "name": "squirrel-1",
+          "date": "2016-03-13",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 2,
+          "name": "squirrel-2",
+          "date": "2016-03-13",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 3,
+          "name": "squirrel-3",
+          "date": "2017-03-12",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 4,
+          "name": "squirrel-4",
+          "date": "2017-03-12",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 5,
+          "name": "squirrel-5",
+          "date": "2017-03-12",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 6,
+          "name": "squirrel-6",
+          "date": "2018-04-07",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 7,
+          "name": "squirrel-7",
+          "date": "2018-04-07",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        }
+      ]
+    },
+    {
+      "name": "raccoons",
+      "data": [
+        {
+          "id": 1,
+          "name": "raccoon-1",
+          "date": "2017-09-10",
+          "location": "Pforzheim, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 2,
+          "name": "raccoon-2",
+          "date": "2018-07-30",
+          "location": "Worms, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 3,
+          "name": "raccoon-3",
+          "date": "2018-07-30",
+          "location": "Worms, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 4,
+          "name": "raccoon-4",
+          "date": "2018-07-30",
+          "location": "Worms, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 5,
+          "name": "raccoon-5",
+          "date": "2018-10-07",
+          "location": "Waldkirch, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 6,
+          "name": "raccoon-6",
+          "date": "2018-10-07",
+          "location": "Waldkirch, Germany",
+          "camera": "Canon EOS 60D"
+        }
+      ]
+    }
+  ]
+}
