@@ -1,8 +1,8 @@
 {
-  "photos": [
+  "data": [
     {
       "name": "squirrels",
-      "data": [
+      "photos": [
         {
           "id": 1,
           "name": "squirrel-1",
@@ -56,7 +56,7 @@
     },
     {
       "name": "raccoons",
-      "data": [
+      "photos": [
         {
           "id": 1,
           "name": "raccoon-1",
