@@ -12,6 +12,7 @@
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="manifest" href="/site.webmanifest">
     <script src="data_loader.js"></script>
+    <script src="photo_details_view.js"></script>
     <title>Erleuchtung - YuKitAs</title>
 
     <h1>Konnichiwa Sekai!</h1>
@@ -56,54 +57,10 @@
       var originalPhoto = document.querySelector("#original-photo");
       var leftArrow = document.querySelector("#left");
       var rightArrow = document.querySelector("#right");
-
-      var photoDetailsView = {
-        currentTag: "",
-        currentPhotos: [],
-        _currentIndex: 0,
-        get currentIndex() {
-          return this._currentIndex;
-        },
-        set currentIndex(index) {
-          this._currentIndex = index;
-          this._setOriginalPhoto();
-          this._displayArrows(index);
-        },
-        addEventListenerOnLoad() {
-          leftArrow.addEventListener("click", () => {
-            this.currentIndex--;
-          });
-
-          right.addEventListener("click", () => {
-            this.currentIndex++;
-          });
-        },
-        display(tag, photos, index) {
-          this.currentTag = tag;
-          this.currentPhotos = photos;
-          this.currentIndex = index;
-          modal.style.display = "block";
-        },
-        hide() {
-          modal.style.display = "none";
-        },
-        _setOriginalPhoto() {
-          let photos = this.currentPhotos;
-          let i = this.currentIndex;
-          originalPhoto.setAttribute("src", `resources/${this.currentTag}/${photos[i].name}-raw.jpg`);
-
-          let dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
-          document.querySelector("#date").textContent = new Date(photos[i].date).toLocaleDateString("en-US", dateFormat);
-          document.querySelector("#location").textContent = photos[i].location;
-        },
-        _displayArrows(index) {
-          leftArrow.style.display = index === 0 ? "none" : "block";
-          rightArrow.style.display = index === 3 ? "none" : "block";
-        }
-      };
+      var thumbnailNum = 4;
 
       window.onload = () => {
-        photoDetailsView.addEventListenerOnLoad();
+        photoDetailsView.addEventListenerOnLoad(thumbnailNum);
 
         load().then(metadata => {
           JSON.parse(metadata).data.forEach(photosByTag => {
@@ -111,7 +68,7 @@
             const photos = photosByTag.photos.reverse();
             var thumbnailsDOM = document.querySelector(`#${tag}`);
 
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < thumbnailNum; i++) {
               let card = document.createElement("span");
               card.setAttribute("class", "thumbnail-card");
 
@@ -123,17 +80,15 @@
               thumbnailDOM.setAttribute("class", "thumbnail");
               let thumbnailName = `resources/${tag}/${photos[i].name}`;
               thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
-              thumbnailDOM.addEventListener("click", () => {
-                photoDetailsView.display(tag, photos, i);
-              });
+              thumbnailDOM.addEventListener("click", () => photoDetailsView.display(tag, photos, i));
 
               card.append(zoomIcon);
               card.append(thumbnailDOM);
               thumbnailsDOM.appendChild(card);
             }
-          })
+          });
         });
-      }
+      };
 
       window.onclick = e => {
         if (e.target === modal) {

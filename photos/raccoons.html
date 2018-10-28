@@ -12,6 +12,7 @@
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="manifest" href="/site.webmanifest">
     <script src="data_loader.js"></script>
+    <script src="photo_details_view.js"></script>
     <title>Erleuchtung - YuKitAs</title>
 
     <h1>Konnichiwa Sekai!</h1>
@@ -48,6 +49,49 @@
     </div>
 
     <script>
+      var modal = document.querySelector("#modal");
+      var originalPhoto = document.querySelector("#original-photo");
+      var leftArrow = document.querySelector("#left");
+      var rightArrow = document.querySelector("#right");
+      var tag = "raccoons";
+      var thumbnailsDOM = document.querySelector(`#${tag}`);
+
+      window.onload = () => {
+        load().then(metadata => {
+          const photos = JSON.parse(metadata).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
+          let thumbnailNum = photos.length;
+          photoDetailsView.addEventListenerOnLoad(thumbnailNum);
+
+          for (let i = 0; i < thumbnailNum; i++) {
+            let card = document.createElement("span");
+            card.setAttribute("class", "thumbnail-card");
+
+            let zoomIcon = document.createElement("img");
+            zoomIcon.setAttribute("class", "zoom-icon");
+            zoomIcon.setAttribute("src", "/assets/icons/zoom.png");
+
+            let thumbnailDOM = document.createElement("img");
+            thumbnailDOM.setAttribute("class", "thumbnail");
+            let thumbnailName = `resources/${tag}/${photos[i].name}`;
+            thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
+            thumbnailDOM.addEventListener("click", () => {
+              photoDetailsView.display(tag, photos, i);
+            });
+
+            card.append(zoomIcon);
+            card.append(thumbnailDOM);
+            thumbnailsDOM.appendChild(card);
+          }
+        });
+      };
+
+      window.onclick = e => {
+        if (e.target === modal) {
+          e.preventDefault();
+          e.stopPropagation();
+          photoDetailsView.hide();
+        }
+      };
     </script>
   </body>
 </html>
