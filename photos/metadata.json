@@ -68,35 +68,56 @@
           "id": 2,
           "name": "raccoon-2",
           "date": "2018-07-30",
-          "location": "Worms, Germany",
+          "location": "Tiergarten Worms, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 3,
           "name": "raccoon-3",
           "date": "2018-07-30",
-          "location": "Worms, Germany",
+          "location": "Tiergarten Worms, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 4,
           "name": "raccoon-4",
           "date": "2018-07-30",
-          "location": "Worms, Germany",
+          "location": "Tiergarten Worms, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 5,
           "name": "raccoon-5",
           "date": "2018-10-07",
-          "location": "Waldkirch, Germany",
+          "location": "Schwarzwaldzoo Waldkirch, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 6,
           "name": "raccoon-6",
           "date": "2018-10-07",
-          "location": "Waldkirch, Germany",
+          "location": "Schwarzwaldzoo Waldkirch, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 7,
+          "name": "raccoon-7",
+          "date": "2018-11-03",
+          "location": "Wildpark Schwarze Berge, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 8,
+          "name": "raccoon-8",
+          "date": "2018-11-03",
+          "location": "Wildpark Schwarze Berge, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 9,
+          "name": "raccoon-9",
+          "date": "2018-11-03",
+          "location": "Wildpark Lüneburger Heide, Germany",
           "camera": "Canon EOS 60D"
         }
       ]
