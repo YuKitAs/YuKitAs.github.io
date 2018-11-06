@@ -119,6 +119,13 @@
           "date": "2018-11-03",
           "location": "Wildpark Lüneburger Heide, Germany",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 10,
+          "name": "raccoon-10",
+          "date": "2018-11-03",
+          "location": "Wildpark Lüneburger Heide, Germany",
+          "camera": "Canon EOS 60D"
         }
       ]
     }
