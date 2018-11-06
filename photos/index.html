@@ -58,6 +58,7 @@
       var leftArrow = document.querySelector("#left");
       var rightArrow = document.querySelector("#right");
       var thumbnailNum = 4;
+      var photoPath = "https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/photos/resources";
 
       window.onload = () => {
         photoDetailsView.addEventListenerOnLoad(thumbnailNum);
@@ -78,7 +79,7 @@
 
               let thumbnailDOM = document.createElement("img");
               thumbnailDOM.setAttribute("class", "thumbnail");
-              let thumbnailName = `resources/${tag}/${photos[i].name}`;
+              let thumbnailName = `${photoPath}/${tag}/${photos[i].name}`;
               thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
               thumbnailDOM.addEventListener("click", () => photoDetailsView.display(tag, photos, i));
 
