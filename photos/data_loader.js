@@ -1,5 +1,5 @@
 function load() {
-  const url = `https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/photos/metadata.json`;
+  const url = `https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/photos/manifest.json`;
 
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
