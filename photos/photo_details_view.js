@@ -14,13 +14,25 @@ var photoDetailsView = {
   addEventListenerOnLoad(thumbnailNum) {
     this.thumbnailNum = thumbnailNum;
 
-    leftArrow.addEventListener("click", () => {
-      this.currentIndex--;
-    });
+    leftArrow.onclick = e => this.currentIndex--;
 
-    right.addEventListener("click", () => {
-      this.currentIndex++;
-    });
+    right.onclick = () => this.currentIndex++;
+
+    document.onkeydown = e => {
+      if (this.currentIndex !== 0 && e.key === "ArrowLeft" || e.key === "Left") {
+        this.currentIndex--;
+        return;
+      }
+
+      if (this.currentIndex !== (this.thumbnailNum - 1) && e.key === "ArrowRight" || e.key === "Right") {
+        this.currentIndex++;
+        return;
+      }
+
+      if (e.key === "Escape") {
+        this.hide();
+      }
+    };
   },
   display(tag, photos, index) {
     this.currentTag = tag;

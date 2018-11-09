@@ -81,7 +81,7 @@
               thumbnailDOM.setAttribute("class", "thumbnail");
               let thumbnailName = `${photoPath}/${tag}/${photos[i].name}`;
               thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
-              thumbnailDOM.addEventListener("click", () => photoDetailsView.display(tag, photos, i));
+              thumbnailDOM.onclick = () => photoDetailsView.display(tag, photos, i);
 
               card.append(zoomIcon);
               card.append(thumbnailDOM);
