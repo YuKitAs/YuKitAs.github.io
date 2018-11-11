@@ -11,17 +11,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="manifest" href="/site.webmanifest">
-    <script src="data_loader.js"></script>
+    <script src="/js/initialize.js"></script>
+    <script src="/js/data_loader.js"></script>
     <script src="photo_details_view.js"></script>
-    <title>Erleuchtung - YuKitAs</title>
-
-    <h1>Konnichiwa Sekai!</h1>
-    <div class="nav">
-      <a href="/"><span class="nav-item">Home</span></a> |
-      <a href="/photos"><span class="nav-item">Photos</span></a> |
-      <a href="/drawings"><span class="nav-item">Drawings</span></a> |
-      <a href="/about"><span class="nav-item">About</span></a>
-    </div>
+    <title>Squirrels - YuKitAs</title>
   </head>
   <body>
     <div class="container">
@@ -49,15 +42,12 @@
     </div>
 
     <script>
-      var modal = document.querySelector("#modal");
-      var originalPhoto = document.querySelector("#original-photo");
-      var leftArrow = document.querySelector("#left");
-      var rightArrow = document.querySelector("#right");
       var tag = "squirrels";
-      var thumbnailsDOM = document.querySelector(`#${tag}`);
 
       window.onload = () => {
-        load().then(metadata => {
+        renderHeader();
+
+        load("photos").then(metadata => {
           const photos = JSON.parse(metadata).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
           let thumbnailNum = photos.length;
           photoDetailsView.addEventListenerOnLoad(thumbnailNum);
@@ -74,13 +64,11 @@
             thumbnailDOM.setAttribute("class", "thumbnail");
             let thumbnailName = `resources/${tag}/${photos[i].name}`;
             thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
-            thumbnailDOM.addEventListener("click", () => {
-              photoDetailsView.display(tag, photos, i);
-            });
+            thumbnailDOM.onclick = () => photoDetailsView.display(tag, photos, i);
 
             card.append(zoomIcon);
             card.append(thumbnailDOM);
-            thumbnailsDOM.appendChild(card);
+            document.querySelector(`#${tag}`).appendChild(card);
           }
         });
       };

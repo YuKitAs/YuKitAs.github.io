@@ -14,9 +14,8 @@ var photoDetailsView = {
   addEventListenerOnLoad(thumbnailNum) {
     this.thumbnailNum = thumbnailNum;
 
-    leftArrow.onclick = e => this.currentIndex--;
-
-    right.onclick = () => this.currentIndex++;
+    document.querySelector("#left").onclick = () => this.currentIndex--;
+    document.querySelector("#right").onclick = () => this.currentIndex++;
 
     document.onkeydown = e => {
       if (this.currentIndex !== 0 && e.key === "ArrowLeft" || e.key === "Left") {
@@ -38,22 +37,22 @@ var photoDetailsView = {
     this.currentTag = tag;
     this.currentPhotos = photos;
     this.currentIndex = index;
-    modal.style.display = "block";
+    document.querySelector("#modal").style.display = "block";
   },
   hide() {
-    modal.style.display = "none";
+    document.querySelector("#modal").style.display = "none";
   },
   _setOriginalPhoto() {
     let photos = this.currentPhotos;
     let i = this.currentIndex;
-    originalPhoto.setAttribute("src", `resources/${this.currentTag}/${photos[i].name}-raw.jpg`);
+    document.querySelector("#original-photo").setAttribute("src", `resources/${this.currentTag}/${photos[i].name}-raw.jpg`);
 
     let dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
     document.querySelector("#date").textContent = new Date(photos[i].date).toLocaleDateString("en-US", dateFormat);
     document.querySelector("#location").textContent = photos[i].location;
   },
   _displayArrows(index) {
-    leftArrow.style.display = index === 0 ? "none" : "block";
-    rightArrow.style.display = index === (this.thumbnailNum - 1) ? "none" : "block";
+    document.querySelector("#left").style.display = index === 0 ? "none" : "block";
+    document.querySelector("#right").style.display = index === (this.thumbnailNum - 1) ? "none" : "block";
   }
 };
