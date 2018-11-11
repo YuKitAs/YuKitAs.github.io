@@ -15,11 +15,10 @@
     <title>Erleuchtung - YuKitAs</title>
   </head>
   <body>
-    <img class="home" id="home" src="/assets/images/home-before.png" />
-
     <script>
       window.onload = () => {
         renderHeader();
+        renderHomeImage();
 
         setTimeout(() => document.querySelector("#home").setAttribute("src", "/assets/images/home-after.png"), 5000);
       };

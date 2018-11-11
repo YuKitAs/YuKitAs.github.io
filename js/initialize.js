@@ -8,3 +8,7 @@ function renderHeader() {
               </div>';
   document.body.innerHTML = `<h1>${greeting}</h1>` + `${nav}` + document.body.innerHTML;
 }
+
+function renderHomeImage() {
+  document.body.innerHTML += '<img class="home" id="home" src="/assets/images/home-before.png" />';
+}
