@@ -1,5 +1,5 @@
 function renderHeader() {
-  const greeting = "Konnichiwa Sekai!";
+  const greeting = `$ echo "${_greet()}, Sekai!"`;
   const nav = '<div class="nav"> \
                 <a href="/"><span class="nav-item">Home</span></a> | \
                 <a href="/photos"><span class="nav-item">Photos</span></a> | \
@@ -11,4 +11,12 @@ function renderHeader() {
 
 function renderHomeImage() {
   document.body.innerHTML += '<img class="home" id="home" src="/assets/images/home-before.png" />';
+}
+
+function _greet() {
+  hour = new Date().getHours();
+  let greet = (hour >= 6 && hour <= 18) ? "Konnichiwa" : "Konbanwa";
+  console.log(`🐹: ${greet}, Sekai!`);
+
+  return greet;
 }
