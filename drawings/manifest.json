@@ -2,7 +2,7 @@
   "data": [
     {
       "name": "smartphone",
-      "photos": [
+      "drawings": [
         {
           "id": 1,
           "name": "smartphone-1",
@@ -57,7 +57,7 @@
     },
     {
       "name": "sketch",
-      "photos": [
+      "drawings": [
         {
           "id": 1,
           "name": "sketch-1",
