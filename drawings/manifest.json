@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "name": "smartphone",
+      "photos": [
+        {
+          "id": 1,
+          "name": "smartphone-1",
+          "year": "2015"
+        },
+        {
+          "id": 2,
+          "name": "smartphone-2",
+          "year": "2015"
+        },
+        {
+          "id": 3,
+          "name": "smartphone-3",
+          "year": "2016"
+        },
+        {
+          "id": 4,
+          "name": "smartphone-4",
+          "year": "2016"
+        },
+        {
+          "id": 5,
+          "name": "smartphone-5",
+          "year": "2016"
+        },
+        {
+          "id": 6,
+          "name": "smartphone-6",
+          "year": "2016"
+        },
+        {
+          "id": 7,
+          "name": "smartphone-7",
+          "year": "2016"
+        },
+        {
+          "id": 8,
+          "name": "smartphone-8",
+          "year": "2017"
+        },
+        {
+          "id": 9,
+          "name": "smartphone-9",
+          "year": "2018"
+        },
+        {
+          "id": 10,
+          "name": "smartphone-10",
+          "year": "2018"
+        }
+      ]
+    },
+    {
+      "name": "sketch",
+      "photos": [
+        {
+          "id": 1,
+          "name": "sketch-1",
+          "year": "2011"
+        },
+        {
+          "id": 2,
+          "name": "sketch-2",
+          "date": "2011"
+        },
+        {
+          "id": 3,
+          "name": "sketch-3",
+          "date": "2010"
+        }
+      ]
+    }
+  ]
+}
