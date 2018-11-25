@@ -17,6 +17,52 @@
     <title>Squirrels - YuKitAs</title>
   </head>
   <body>
+    <style scoped>
+      /* Mobile phones: 1 col */
+      @media only screen and (max-width: 768px) {
+        .home {
+          width: 80vw;
+          height: auto;
+        }
+
+        .container {
+          width: 250px;
+        }
+
+        .photo-details {
+          display: inline-block;
+          text-align: center;
+        }
+
+        .close-button {
+          margin: auto;
+        }
+
+        .photo-overlay {
+          flex-direction: column;
+        }
+
+        .original-photo {
+          width: 80vw;
+          height: auto;
+        }
+      }
+
+      /* Tablets: 2 cols */
+      @media only screen and (min-width: 768px) {
+        .container {
+          width: 512px;
+        }
+      }
+
+      /* PC: 4 cols */
+      @media only screen and (min-width: 1200px) {
+        .container {
+          width: 1024px;
+        }
+      }
+    </style>
+    
     <div class="container">
       <div class="thumbnails" id="squirrels"></div>
     </div>
