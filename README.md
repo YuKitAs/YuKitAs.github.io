@@ -2,6 +2,12 @@
 
 Local:
 
+0. Install dependencies:
+
+  ```console
+  $ bundle install
+  ```
+
 1. Build with Jekyll:
 
   ```console
