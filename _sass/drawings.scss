@@ -18,29 +18,13 @@
 .drawing {
   display: block;
   width: 100%;
+  opacity: .8;
+}
+
+.drawing:hover {
+  opacity: 1;
 }
 
 .drawing-column {
   float: left;
-}
-
-/* Tablets: 2 cols */
-@media screen and (min-width: 768px) {
-  .container, .drawings {
-    width: 750px;
-  }
-}
-
-/* Big tablets: 3 cols */
-@media screen and (min-width: 992px) {
-  .container, .drawings {
-    width: 970px;
-  }
-}
-
-/* PC: 4 cols */
-@media screen and (min-width: 1200px) {
-  .container, .drawings {
-    width: 1170px;
-  }
 }
