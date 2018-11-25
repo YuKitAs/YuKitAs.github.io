@@ -1,6 +1,7 @@
 ---
 ---
 @import "photos";
+@import "drawings";
 
 $bg-color: #24292e; // black
 $text-color-primary: #fff; // white
@@ -25,8 +26,31 @@ body {
   font-size: 20px;
 }
 
+.nav-item {
+  color: $text-color-light-gray;
+}
+
 .nav-item:focus {
   color: $text-color-primary;
+}
+
+.placeholder-text {
+  margin-top: 50px;
+}
+
+.container {
+  margin: 2rem auto;
+}
+
+.label {
+  margin-bottom: .2rem;
+  font-family: sans-serif;
+  color: $text-color-light-gray;
+  text-align: left;
+}
+
+.label:hover {
+  text-decoration: underline;
 }
 
 a {
@@ -36,43 +60,4 @@ a {
 
 a:hover {
   color: $text-color-primary;
-}
-
-.placeholder-text {
-  margin-top: 50px;
-}
-
-.container {
-  width: 1024px;
-  margin: 2rem auto;
-  text-align: left;
-}
-
-.label {
-  margin-bottom: .2rem;
-  font-family: sans-serif;
-  color: $text-color-primary;
-}
-
-.label:hover {
-  text-decoration: underline;
-}
-
-/* Tablets */
-@media only screen and (max-width: 1024px) {
-  .container {
-    width: 515px !important;
-  }
-}
-
-/* Mobile phones */
-@media only screen and (max-width: 768px) {
-  .home {
-    width: 80vw;
-    height: auto;
-  }
-
-  .container {
-    width: 250px !important;
-  }
 }

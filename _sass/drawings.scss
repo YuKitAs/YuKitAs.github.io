@@ -1,0 +1,46 @@
+.drawings {
+  margin: 0 auto;
+}
+
+.drawings:before, .drawings:after {
+  content: "";
+  display: table;
+}
+
+.drawings:after {
+  clear: both;
+}
+
+.drawing-card {
+  margin: 10px;
+}
+
+.drawing {
+  display: block;
+  width: 100%;
+}
+
+.drawing-column {
+  float: left;
+}
+
+/* Tablets: 2 cols */
+@media screen and (min-width: 768px) {
+  .container, .drawings {
+    width: 750px;
+  }
+}
+
+/* Big tablets: 3 cols */
+@media screen and (min-width: 992px) {
+  .container, .drawings {
+    width: 970px;
+  }
+}
+
+/* PC: 4 cols */
+@media screen and (min-width: 1200px) {
+  .container, .drawings {
+    width: 1170px;
+  }
+}

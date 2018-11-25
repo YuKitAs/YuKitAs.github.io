@@ -1,8 +1,7 @@
 $photo-thumbnail-size: 250px;
 
 .thumbnails {
-  width: inherit;
-  margin: .2rem 0 2rem;
+  margin: .2rem auto 2rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -129,8 +128,17 @@ $photo-thumbnail-size: 250px;
   right: 0;
 }
 
-/* Mobile phones */
+/* Mobile phones: 1 col */
 @media only screen and (max-width: 768px) {
+  .home {
+    width: 80vw;
+    height: auto;
+  }
+
+  .container {
+    width: 250px !important;
+  }
+
   .photo-details {
     display: inline-block;
     text-align: center;
@@ -147,5 +155,19 @@ $photo-thumbnail-size: 250px;
   .original-photo {
     width: 80vw;
     height: auto;
+  }
+}
+
+/* Tablets: 2 cols */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 512px;
+  }
+}
+
+/* PC: 4 cols */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1024px;
   }
 }
