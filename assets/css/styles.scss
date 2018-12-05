@@ -19,6 +19,30 @@ body {
   margin-top: 50px;
   border: .5rem solid white;
   background-color: white;
+  animation: enter ease-in-out 1s;
+  -webkit-animation: enter ease-in-out 1s;
+}
+
+@keyframes enter {
+  from {
+    transform: translateY(200px);
+    opacity: .1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes enter {
+  from {
+    transform: translateY(200px);
+    opacity: .1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .nav {
