@@ -128,6 +128,39 @@
           "camera": "Canon EOS 60D"
         }
       ]
+    },
+    {
+      "name": "foxes",
+      "photos": [
+        {
+          "id": 1,
+          "name": "fox-1",
+          "date": "2018-10-07",
+          "location": "Schwarzwaldzoo Waldkirch, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 2,
+          "name": "fox-2",
+          "date": "2018-10-07",
+          "location": "Schwarzwaldzoo Waldkirch, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 3,
+          "name": "fox-3",
+          "date": "2018-11-03",
+          "location": "Wildpark Schwarze Berge, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 4,
+          "name": "fox-4",
+          "date": "2018-11-03",
+          "location": "Wildpark Schwarze Berge, Germany",
+          "camera": "Canon EOS 60D"
+        }
+      ]
     }
   ]
 }
