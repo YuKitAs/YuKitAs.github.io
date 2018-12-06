@@ -54,15 +54,20 @@ body {
   color: $text-color-light-gray;
 }
 
-.nav-item:focus {
+.nav-item:hover {
   color: $text-color-primary;
+}
+
+.content-container {
+  margin-top: 50px;
 }
 
 .content {
   width: 50vw;
-  margin: 50px auto;
+  margin: 20px auto;
   text-align: left;
   line-height: 2;
+  font-size: 20px;
   font-family: sans-serif;
 }
 
@@ -94,5 +99,11 @@ a:hover {
   .home, .content {
     width: 80vw;
     height: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .content {
+    width: 40vw;
   }
 }
