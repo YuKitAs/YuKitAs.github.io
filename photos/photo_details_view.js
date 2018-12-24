@@ -47,7 +47,11 @@ var photoDetailsView = {
     let i = this.currentIndex;
     document.querySelector("#original-photo").setAttribute("src", `resources/${this.currentTag}/${photos[i].name}-raw.jpg`);
 
-    let dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
+    let dateFormat = {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
     document.querySelector("#date").textContent = new Date(photos[i].date).toLocaleDateString("en-US", dateFormat);
     document.querySelector("#location").textContent = photos[i].location;
   },

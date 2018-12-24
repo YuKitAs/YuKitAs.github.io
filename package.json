@@ -1,0 +1,23 @@
+{
+  "name": "yukitas.github.io",
+  "version": "1.0.0",
+  "description": "Local:",
+  "main": "index.html",
+  "dependencies": {
+    "eslint": "^5.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuKitAs/YuKitAs.github.io.git"
+  },
+  "author": "YuKitAs",
+  "license": "BSD-3",
+  "bugs": {
+    "url": "https://github.com/YuKitAs/YuKitAs.github.io/issues"
+  },
+  "homepage": "https://github.com/YuKitAs/YuKitAs.github.io#readme"
+}
