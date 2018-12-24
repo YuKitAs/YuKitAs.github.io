@@ -1,11 +1,12 @@
 # YuKitAs.github.io
 
-Local:
+Local dev:
 
 0. Install dependencies:
 
   ```console
   $ bundle install
+  $ npm install
   ```
 
 1. Build with Jekyll:
