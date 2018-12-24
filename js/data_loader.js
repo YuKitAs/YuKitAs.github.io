@@ -1,5 +1,5 @@
 function load(category) {
-  const url = `https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/${category}/manifest.json`;
+  const url = `https://api.github.com/repos/YuKitAs/YuKitAs.github.io/contents/${category}/manifest.json`;
 
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();

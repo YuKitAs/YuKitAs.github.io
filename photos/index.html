@@ -103,7 +103,8 @@
         photoDetailsView.addEventListenerOnLoad(thumbnailNum);
 
         load("photos").then(metadata => {
-          JSON.parse(metadata).data.forEach(photosByTag => {
+          let content = JSON.parse(metadata).content
+          JSON.parse(atob(content)).data.forEach(photosByTag => {
             const tag = photosByTag.name;
             const photos = photosByTag.photos.reverse();
             var thumbnailsDOM = document.querySelector(`#${tag}`);

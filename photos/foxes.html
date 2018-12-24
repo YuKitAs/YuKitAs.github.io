@@ -89,7 +89,8 @@
         renderHeader();
 
         load("photos").then(metadata => {
-          const photos = JSON.parse(metadata).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
+          let content = JSON.parse(metadata).content
+          const photos = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
           let thumbnailNum = photos.length;
           photoDetailsView.addEventListenerOnLoad(thumbnailNum);
 
