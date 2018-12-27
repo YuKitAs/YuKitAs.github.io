@@ -161,6 +161,46 @@
           "camera": "Canon EOS 60D"
         }
       ]
+    },
+    {
+      "name": "coypus",
+      "photos": [
+        {
+          "id": 1,
+          "name": "coypu-1",
+          "date": "2018-12-26",
+          "location": "Rastatt, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 2,
+          "name": "coypu-2",
+          "date": "2018-12-26",
+          "location": "Rastatt, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 3,
+          "name": "coypu-3",
+          "date": "2018-12-26",
+          "location": "Rastatt, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 4,
+          "name": "coypu-4",
+          "date": "2018-12-26",
+          "location": "Rastatt, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 5,
+          "name": "coypu-5",
+          "date": "2018-12-26",
+          "location": "Rastatt, Germany",
+          "camera": "Canon EOS 60D"
+        }
+      ]
     }
   ]
 }
