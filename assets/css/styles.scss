@@ -6,11 +6,17 @@
 $bg-color: #24292e; // black
 $text-color-primary: #fff; // white
 $text-color-light-gray: #bfbfbf;
+$font-family-primary: sans-serif;
 
 body {
   background-color: $bg-color;
   color: $text-color-primary;
   text-align: center;
+}
+
+footer {
+  font-family: $font-family-primary;
+  color: $text-color-light-gray;
 }
 
 .home {
@@ -46,7 +52,7 @@ body {
 }
 
 .nav {
-  font-family: sans-serif;
+  font-family: $font-family-primary;
   font-size: 20px;
 }
 
@@ -68,7 +74,7 @@ body {
   text-align: left;
   line-height: 2;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: $font-family-primary;
 }
 
 .container {
@@ -77,7 +83,7 @@ body {
 
 .label {
   margin-bottom: .2rem;
-  font-family: sans-serif;
+  font-family: $font-family-primary;
   color: $text-color-light-gray;
   text-align: left;
 }
