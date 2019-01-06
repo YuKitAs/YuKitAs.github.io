@@ -102,44 +102,28 @@
         let container = document.querySelector(".container");
 
         let content = JSON.parse(metadata).content;
-        JSON.parse(atob(content)).data.forEach(photosByTag => {
-          const tag = photosByTag.name;
-          const photos = photosByTag.photos.reverse();
+        let data = JSON.parse(atob(content)).data;
 
-          let labelDOM = document.createElement("div");
-          labelDOM.setAttribute("class", "label");
+        // load first three categories
+        data.slice(0, 3).forEach(photosByTag => {
+          container.appendChild(_createCategoryDOM(photosByTag));
+        });
 
-          let labelLink = document.createElement("a");
-          labelLink.setAttribute("href", `${tag}`);
-          labelLink.append(`#${tag}`);
-          labelDOM.appendChild(labelLink);
-
-          let thumbnailsDOM = document.createElement("div");
-          thumbnailsDOM.setAttribute("class", "thumbnails");
-          thumbnailsDOM.setAttribute("id", `${tag}`);
-
-          for (let i = 0; i < thumbnailNum; i++) {
-            let card = document.createElement("span");
-            card.setAttribute("class", "thumbnail-card");
-
-            let zoomIcon = document.createElement("img");
-            zoomIcon.setAttribute("class", "zoom-icon");
-            zoomIcon.setAttribute("src", "/assets/icons/zoom.png");
-
-            let thumbnailDOM = document.createElement("img");
-            thumbnailDOM.setAttribute("class", "thumbnail");
-            let thumbnailName = `${photoPath}/${tag}/${photos[i].name}`;
-            thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
-            thumbnailDOM.onclick = () => photoDetailsView.display(tag, photos, i);
-
-            card.appendChild(zoomIcon);
-            card.appendChild(thumbnailDOM);
-            thumbnailsDOM.appendChild(card);
+        let loaded = 3;
+        window.onscroll = () => {
+          if (loaded >= data.length) {
+            return;
           }
 
-          container.appendChild(labelDOM);
-          container.appendChild(thumbnailsDOM);
-        });
+          for (let i = 3; i < data.length; i += 3) {
+            if (container.scrollHeight >= document.body.clientHeight - window.innerHeight) {
+              data.slice(i, i + 3).forEach(photosByTag => {
+                container.appendChild(_createCategoryDOM(photosByTag));
+                loaded++;
+              });
+            }
+          }
+        };
       });
     };
 
@@ -150,6 +134,48 @@
         photoDetailsView.hide();
       }
     };
+
+    function _createCategoryDOM(photosByTag) {
+      let categoryDOM = document.createElement("div");
+
+      const tag = photosByTag.name;
+      const photos = photosByTag.photos.reverse();
+
+      let labelDOM = document.createElement("div");
+      labelDOM.setAttribute("class", "label");
+      let labelLink = document.createElement("a");
+      labelLink.setAttribute("href", `${tag}`);
+      labelLink.append(`#${tag}`);
+      labelDOM.appendChild(labelLink);
+
+      let thumbnailsDOM = document.createElement("div");
+      thumbnailsDOM.setAttribute("class", "thumbnails");
+      thumbnailsDOM.setAttribute("id", `${tag}`);
+
+      for (let i = 0; i < thumbnailNum; i++) {
+        let card = document.createElement("span");
+        card.setAttribute("class", "thumbnail-card");
+
+        let zoomIcon = document.createElement("img");
+        zoomIcon.setAttribute("class", "zoom-icon");
+        zoomIcon.setAttribute("src", "/assets/icons/zoom.png");
+
+        let thumbnailDOM = document.createElement("img");
+        thumbnailDOM.setAttribute("class", "thumbnail");
+        let thumbnailName = `${photoPath}/${tag}/${photos[i].name}`;
+        thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
+        thumbnailDOM.onclick = () => photoDetailsView.display(tag, photos, i);
+
+        card.appendChild(zoomIcon);
+        card.appendChild(thumbnailDOM);
+        thumbnailsDOM.appendChild(card);
+      }
+
+      categoryDOM.appendChild(labelDOM);
+      categoryDOM.appendChild(thumbnailsDOM);
+
+      return categoryDOM;
+    }
   </script>
 </body>
 
