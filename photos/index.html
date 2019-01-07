@@ -87,13 +87,13 @@
   </div>
 
   <footer>
-    <img class="top-icon" id="top" src="/assets/icons/up-arrow-white.png" onclick="_goToTop()" />
+    <img class="top-icon" id="top" src="/assets/icons/up-arrow-white.png" onclick="scrollToTop()" />
     <p>All rights reserved © 2018-2019 YuKitAs</p>
   </footer>
 
   <script>
-    var thumbnailNum = 4;
-    var photoPath = "https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/photos/resources";
+    const thumbnailNum = 4;
+    const photoPath = "https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/photos/resources";
 
     window.onload = () => {
       renderHeader();
@@ -112,9 +112,8 @@
 
         let loaded = 3;
         window.onscroll = () => {
-          document.querySelector("#top").style.display =
-            (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ?
-            "block" : "none";
+          const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+          document.querySelector("#top").style.display = scrollTop > 100 ? "block" : "none";
 
           if (loaded >= data.length) {
             return;
@@ -182,9 +181,12 @@
       return categoryDOM;
     }
 
-    function _goToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+    const scrollToTop = () => {
+      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      if (scrollTop > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, scrollTop - scrollTop / 8);
+      }
     }
   </script>
 </body>
