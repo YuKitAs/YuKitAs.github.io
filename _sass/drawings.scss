@@ -19,6 +19,8 @@
   display: block;
   width: 100%;
   opacity: .8;
+  transition: opacity .5s ease;
+  backface-visibility: hidden;
 }
 
 .drawing:hover {
