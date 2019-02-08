@@ -199,6 +199,13 @@
           "date": "2018-12-26",
           "location": "Rastatt, Germany",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 6,
+          "name": "coypu-6",
+          "date": "2019-02-04",
+          "location": "Prague, Czech",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
