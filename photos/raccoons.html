@@ -12,7 +12,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
   <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="manifest" href="/site.webmanifest">
+  <script src="/js/loader.js"></script>
   <script src="/js/initialize.js"></script>
+  <script src="/js/main.js" defer></script>
   <script src="/js/data_loader.js"></script>
   <script src="photo_details_view.js"></script>
   <title>Raccoons - YuKitAs</title>
@@ -60,6 +62,8 @@
     }
   </style>
 
+  <div id="app"></div>
+
   <div class="container">
     <div class="thumbnails" id="raccoons"></div>
   </div>
@@ -88,9 +92,7 @@
     var tag = "raccoons";
 
     window.onload = () => {
-      renderHeader();
-
-      load("photos").then(metadata => {
+      dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
         const photos = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
         let thumbnailNum = photos.length;

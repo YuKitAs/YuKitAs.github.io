@@ -12,7 +12,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
   <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="manifest" href="/site.webmanifest">
+  <script src="/js/loader.js"></script>
   <script src="/js/initialize.js"></script>
+  <script src="/js/main.js" defer></script>
   <script src="/js/data_loader.js"></script>
   <script src="/js/responsive_waterfall.js"></script>
   <title>Drawings - YuKitAs</title>
@@ -56,6 +58,7 @@
     }
   </style>
 
+  <div id="app"></div>
   <div class="container">
     <div class="drawings"></div>
   </div>
@@ -69,9 +72,7 @@
     var path = "https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/drawings/resources";
 
     window.onload = () => {
-      renderHeader();
-
-      load("drawings").then(metadata => {
+      dataLoader.load("drawings").then(metadata => {
         let content = JSON.parse(metadata).content
         JSON.parse(atob(content)).data.forEach(drawingsByTag => {
           const tag = drawingsByTag.name;

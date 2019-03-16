@@ -13,8 +13,7 @@ const initialize = {
                   <a href="/drawings"><span class="nav-item">Drawings</span></a> |
                   <a href="/about"><span class="nav-item">About</span></a>
                 </div>`;
-    const image = `<img class="home" id="home" src="/assets/images/home-before.png" />`;
-    g.doms.app.innerHTML = `<h1>${greeting}</h1>` + `${nav}` + `${image}`;
+    g.doms.app.innerHTML = `<h1>${greeting}</h1>` + `${nav}`;
   }
 };
 
