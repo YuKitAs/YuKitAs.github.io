@@ -208,39 +208,6 @@
           "camera": "Canon EOS 60D"
         }
       ]
-    },
-    {
-      "name": "rabbits",
-      "photos": [
-        {
-          "id": 1,
-          "name": "rabbit-1",
-          "date": "2015-04-06",
-          "location": "Karlsruhe, Germany",
-          "camera": "Canon EOS 60D"
-        },
-        {
-          "id": 2,
-          "name": "rabbit-2",
-          "date": "2015-04-06",
-          "location": "Karlsruhe, Germany",
-          "camera": "Canon EOS 60D"
-        },
-        {
-          "id": 3,
-          "name": "rabbit-3",
-          "date": "2017-04-09",
-          "location": "Karlsruhe, Germany",
-          "camera": "Canon EOS 60D"
-        },
-        {
-          "id": 4,
-          "name": "rabbit-4",
-          "date": "2017-04-09",
-          "location": "Karlsruhe, Germany",
-          "camera": "Canon EOS 60D"
-        }
-      ]
     }
   ]
 }
