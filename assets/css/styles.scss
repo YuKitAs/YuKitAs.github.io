@@ -119,10 +119,10 @@ footer {
   right: 50px;
   z-index: 100;
   cursor: pointer;
-  display: none;
+  visibility: hidden;
   opacity: .4;
-  transition: opacity .5s ease-out;
-  -webkit-transition: opacity .5s ease-out;
+  transition: opacity .5s ease-out, visibility .5s ease-in;
+  -webkit-transition: opacity .5s ease-out, visibility .5s ease-in;
 }
 
 .top-icon:hover {

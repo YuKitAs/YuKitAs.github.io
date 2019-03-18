@@ -101,7 +101,7 @@
 
     window.onscroll = () => {
       const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-      document.querySelector("#top").style.display = scrollTop > 100 ? "block" : "none";
+      document.querySelector("#top").style.visibility = scrollTop > 100 ? "visible" : "hidden";
     };
 
     const scrollToTop = () => {
