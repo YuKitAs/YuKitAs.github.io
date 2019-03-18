@@ -121,8 +121,8 @@ footer {
   cursor: pointer;
   visibility: hidden;
   opacity: .4;
-  transition: opacity .5s ease-out, visibility .5s ease-in;
-  -webkit-transition: opacity .5s ease-out, visibility .5s ease-in;
+  transition: opacity .5s ease-out, visibility .3s ease-in;
+  -webkit-transition: opacity .5s ease-out, visibility .3s ease-in;
 }
 
 .top-icon:hover {
