@@ -25,8 +25,20 @@ footer {
   margin-top: 50px;
   border: .5rem solid white;
   background-color: white;
+}
+
+.home.before {
+  position: absolute;
   animation: enter ease-in-out 1s;
   -webkit-animation: enter ease-in-out 1s;
+  transition: opacity ease-in 1s;
+  -webkit-transition: opacity ease-in 1s;
+}
+
+.home.after {
+  opacity: 0;
+  transition: opacity ease-out 1s;
+  -webkit-transition: opacity ease-out 1s;
 }
 
 @keyframes enter {
@@ -131,7 +143,7 @@ a:hover {
     width: 80vw;
     height: auto;
   }
-  
+
   .content {
     font-size: 18px;
   }

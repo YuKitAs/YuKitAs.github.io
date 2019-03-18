@@ -20,11 +20,15 @@
 
 <body>
   <div id="app"></div>
-  <img class="home" id="home" src="/assets/images/home-before.png" />
-  
+  <img class="home before" id="home-before" src="/assets/images/home-before.png" />
+  <img class="home after" id="home-after" src="/assets/images/home-after.png" />
+
   <script>
     window.onload = () => {
-      setTimeout(() => document.querySelector("#home").setAttribute("src", "/assets/images/home-after.png"), 2000);
+      setTimeout(() => {
+        document.querySelector("#home-before").style.opacity = 0;
+        document.querySelector("#home-after").style.opacity = 1;
+      }, 3000);
     };
   </script>
 </body>
