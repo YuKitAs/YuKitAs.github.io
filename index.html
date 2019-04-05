@@ -12,19 +12,18 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
   <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="manifest" href="/site.webmanifest">
-  <script src="js/loader.js"></script>
   <script src="js/initialize.js"></script>
-  <script src="js/main.js" defer></script>
   <title>Erleuchtung - YuKitAs</title>
 </head>
 
 <body>
-  <div id="app"></div>
   <img class="home before" id="home-before" src="/assets/images/home-before.png" />
   <img class="home after" id="home-after" src="/assets/images/home-after.png" />
 
   <script>
     window.onload = () => {
+      renderHeader();
+
       setTimeout(() => {
         document.querySelector("#home-before").style.opacity = 0;
         document.querySelector("#home-after").style.opacity = 1;

@@ -12,9 +12,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
   <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="manifest" href="/site.webmanifest">
-  <script src="/js/loader.js"></script>
   <script src="/js/initialize.js"></script>
-  <script src="/js/main.js" defer></script>
   <script src="/js/data_loader.js"></script>
   <script src="photo_details_view.js"></script>
   <title>Photos - YuKitAs</title>
@@ -62,7 +60,6 @@
     }
   </style>
 
-  <div id="app"></div>
   <div class="container"></div>
 
   <div class="modal" id="modal">
@@ -99,6 +96,7 @@
     const photoPath = "https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/photos/resources";
 
     window.onload = () => {
+      renderHeader();
       photoDetailsView.addEventListenerOnLoad(thumbnailNum);
 
       dataLoader.load("photos").then(metadata => {

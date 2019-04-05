@@ -11,14 +11,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="manifest" href="/site.webmanifest">
-    <script src="/js/loader.js"></script>
     <script src="/js/initialize.js"></script>
-    <script src="/js/main.js" defer></script>
     <title>About - YuKitAs</title>
   </head>
   <body>
-    <div id="app"></div>
-
     <div class="content-container">
       <img class="about" src="/assets/icons/bon-125x125.png"/>
       <p class="content">
@@ -42,5 +38,8 @@
       </p>
     </div>
 
+    <script>
+      window.onload = () => renderHeader();
+    </script>
   </body>
 </html>
