@@ -9,6 +9,11 @@ function renderHeader() {
   document.body.innerHTML = `<h1>${greeting}</h1>` + `${nav}` + document.body.innerHTML;
 }
 
+function renderHomeImage() {
+  document.body.innerHTML += `<img class="home before" id="home-before" src="/assets/images/home-before.png" />`;
+  document.body.innerHTML += `<img class="home after" id="home-after" src="/assets/images/home-after.png" />`;
+}
+
 function _greet() {
   let hour = new Date().getHours();
   let greet = (hour >= 6 && hour <= 18) ? "Konnichiwa" : "Konbanwa";

@@ -17,12 +17,10 @@
 </head>
 
 <body>
-  <img class="home before" id="home-before" src="/assets/images/home-before.png" />
-  <img class="home after" id="home-after" src="/assets/images/home-after.png" />
-
   <script>
     window.onload = () => {
       renderHeader();
+      renderHomeImage();
 
       setTimeout(() => {
         document.querySelector("#home-before").style.opacity = 0;
