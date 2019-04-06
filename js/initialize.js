@@ -10,8 +10,8 @@ function renderHeader() {
 }
 
 function renderHomeImage() {
-  document.body.innerHTML += `<img class="home before" id="home-before" src="/assets/images/home-before.png" />`;
-  document.body.innerHTML += `<img class="home after" id="home-after" src="/assets/images/home-after.png" />`;
+  document.body.innerHTML += `<img class="home before" id="home-before" src="/assets/images/home-before.png" alt="" />`;
+  document.body.innerHTML += `<img class="home after" id="home-after" src="/assets/images/home-after.png" alt="" />`;
 }
 
 function _greet() {
