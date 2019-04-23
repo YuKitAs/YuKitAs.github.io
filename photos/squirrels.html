@@ -61,6 +61,11 @@
   </style>
 
   <div class="container">
+    <div class="description">
+    The red squirrel or Eurasian red squirrel (<i>Sciurus vulgaris</i>) is an arboreal, omnivorous rodent in the genus <i>Sciurus</i> common throughout the forests of Europe and northern Asia.
+    In the UK and Ireland, the population of red squirrels is threatened by the invasive eastern grey squirrels.
+    </div>
+
     <div class="thumbnails" id="squirrels"></div>
   </div>
 
@@ -89,7 +94,7 @@
 
     window.onload = () => {
       renderHeader();
-      
+
       dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
         const photos = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag).photos.reverse();

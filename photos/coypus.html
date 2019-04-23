@@ -61,6 +61,12 @@
   </style>
 
   <div class="container">
+    <div class="description">
+    The coypu (<i>Myocastor coypus</i>), also known as the nutria or the beaver rat, is a large, herbivorous, semiaquatic rodent originally native to subtropical and temperate South America.
+    The coypu lives in burrows alongside stretches of water, and feeds on river plant stems.
+    In Germany it is considered an invasive species.
+    </div>
+
     <div class="thumbnails" id="coypus"></div>
   </div>
 
@@ -89,7 +95,7 @@
 
     window.onload = () => {
       renderHeader();
-      
+
       dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
         const photos = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
