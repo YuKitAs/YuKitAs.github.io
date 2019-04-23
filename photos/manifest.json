@@ -208,6 +208,53 @@
           "camera": "Canon EOS 60D"
         }
       ]
+    },
+    {
+      "name": "groundhogs",
+      "photos": [
+        {
+          "id": 1,
+          "name": "groundhog-1",
+          "date": "2019-04-20",
+          "location": "Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 2,
+          "name": "groundhog-2",
+          "date": "2019-04-20",
+          "location": "Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 3,
+          "name": "groundhog-3",
+          "date": "2019-04-20",
+          "location": "Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 4,
+          "name": "groundhog-4",
+          "date": "2019-04-20",
+          "location": "Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 5,
+          "name": "groundhog-5",
+          "date": "2019-04-20",
+          "location": "Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 6,
+          "name": "groundhog-6",
+          "date": "2019-04-20",
+          "location": "Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        }
+      ]
     }
   ]
 }
