@@ -1,0 +1,106 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#/properties/data",
+      "type": "array",
+      "title": "The Data Schema",
+      "items": {
+        "$id": "#/properties/data/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "name",
+          "photos"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/data/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "squirrels"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "photos": {
+            "$id": "#/properties/data/items/properties/photos",
+            "type": "array",
+            "title": "The Photos Schema",
+            "items": {
+              "$id": "#/properties/data/items/properties/photos/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "id",
+                "name",
+                "date",
+                "location",
+                "camera"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/data/items/properties/photos/items/properties/id",
+                  "type": "integer",
+                  "title": "The Id Schema",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "name": {
+                  "$id": "#/properties/data/items/properties/photos/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "squirrel-1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "date": {
+                  "$id": "#/properties/data/items/properties/photos/items/properties/date",
+                  "type": "string",
+                  "title": "The Date Schema",
+                  "default": "",
+                  "examples": [
+                    "2016-03-13"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "location": {
+                  "$id": "#/properties/data/items/properties/photos/items/properties/location",
+                  "type": "string",
+                  "title": "The Location Schema",
+                  "default": "",
+                  "examples": [
+                    "Karlsruhe, Germany"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "camera": {
+                  "$id": "#/properties/data/items/properties/photos/items/properties/camera",
+                  "type": "string",
+                  "title": "The Camera Schema",
+                  "default": "",
+                  "examples": [
+                    "Canon EOS 60D"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
