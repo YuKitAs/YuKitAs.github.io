@@ -64,7 +64,8 @@ cat <<_EOF_
   </style>
 
   <div class="container">
-    <div class="description"></div>
+    <div class="description">
+    </div>
 
     <div class="thumbnails" id="$NAME"></div>
   </div>
@@ -94,7 +95,7 @@ cat <<_EOF_
   </footer>
 
   <script>
-    var tag = $NAME;
+    var tag = "$NAME";
 
     window.onload = () => {
       renderHeader();
@@ -121,7 +122,7 @@ cat <<_EOF_
 
           card.append(zoomIcon);
           card.append(thumbnailDOM);
-          document.querySelector(`#${tag}`).appendChild(card);
+          document.getElementById(tag).appendChild(card);
         }
       });
     };

@@ -116,13 +116,13 @@
 
           let thumbnailDOM = document.createElement("img");
           thumbnailDOM.setAttribute("class", "thumbnail");
-          let thumbnailName = `resources/${tag}/${photos[i].name}`;
-          thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
+          let thumbnailName = "resources/" + tag + "/" + photos[i].name;
+          thumbnailDOM.setAttribute("src", thumbnailName + ".jpg");
           thumbnailDOM.onclick = () => photoDetailsView.display(tag, photos, i);
 
           card.append(zoomIcon);
           card.append(thumbnailDOM);
-          document.querySelector(`#${tag}`).appendChild(card);
+          document.getElementById(tag).appendChild(card);
         }
       });
     };

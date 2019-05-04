@@ -15,7 +15,7 @@
   <script src="/js/initialize.js"></script>
   <script src="/js/data_loader.js"></script>
   <script src="photo_details_view.js"></script>
-  <title>Raccoons - YuKitAs</title>
+  <title>raccoons - YuKitAs</title>
 </head>
 
 <body>
@@ -116,13 +116,13 @@
 
           let thumbnailDOM = document.createElement("img");
           thumbnailDOM.setAttribute("class", "thumbnail");
-          let thumbnailName = `resources/${tag}/${photos[i].name}`;
-          thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
+          let thumbnailName = "resources/" + tag + "/" + photos[i].name;
+          thumbnailDOM.setAttribute("src", thumbnailName + ".jpg");
           thumbnailDOM.onclick = () => photoDetailsView.display(tag, photos, i);
 
           card.append(zoomIcon);
           card.append(thumbnailDOM);
-          document.querySelector(`#${tag}`).appendChild(card);
+          document.getElementById(tag).appendChild(card);
         }
       });
     };
