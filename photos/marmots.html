@@ -15,7 +15,7 @@
   <script src="/js/initialize.js"></script>
   <script src="/js/data_loader.js"></script>
   <script src="photo_details_view.js"></script>
-  <title>marmots - YuKitAs</title>
+  <title id="title"></title>
 </head>
 
 <body>
@@ -96,6 +96,8 @@
 
   <script>
     var tag = "marmots";
+
+    document.getElementById("title").textContent = tag.charAt(0).toUpperCase() + tag.slice(1) + " - YuKitAs";
 
     window.onload = () => {
       renderHeader();

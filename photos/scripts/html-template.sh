@@ -18,7 +18,7 @@ cat <<_EOF_
   <script src="/js/initialize.js"></script>
   <script src="/js/data_loader.js"></script>
   <script src="photo_details_view.js"></script>
-  <title>$NAME - YuKitAs</title>
+  <title id="title"></title>
 </head>
 
 <body>
@@ -96,6 +96,8 @@ cat <<_EOF_
 
   <script>
     var tag = "$NAME";
+
+    document.getElementById("title").textContent = tag.charAt(0).toUpperCase() + tag.slice(1) + " - YuKitAs";
 
     window.onload = () => {
       renderHeader();
