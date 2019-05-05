@@ -7,3 +7,7 @@ _site/
 .sass-cache
 
 node_modules/
+
+# IDE
+.idea/
+*.backup
