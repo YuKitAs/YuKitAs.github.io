@@ -1,13 +1,13 @@
 # README
 
-* `name` should be plural, e.g. "squirrels".
+* `name` in the following context should be plural, e.g. "squirrels".
 * `date` should be in format `yyyy-mm-dd`, e.g."2016-03-13".
 * An example for `location` is "Karlsruhe, Germany".
 * Optional descriptions can be added into `<div class="description"></div>`.
 
 **Add new resources**
 
-Copy `.jpg` photos into `photos/resources/<name>` (normal size: 800x600; thumbnail size: 250x250)
+Copy `.jpg` photos into `photos/resources/<name>` (`*-raw.jpg`: 800x600; `*.jpg`: 250x250)
 
 **Create a HTML page**
 
