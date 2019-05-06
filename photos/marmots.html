@@ -61,12 +61,7 @@
   </style>
 
   <div class="container">
-    <div class="description">
-    Marmots are large squirrels in the genus <i>Marmota</i>, with some species living in mountainous areas such as the Alps.
-    Marmots typically live in burrows, and hibernate there through the winter.
-    Most marmots are highly social and use loud whistles to communicate with one another, especially when alarmed.
-    </div>
-
+    <div class="description" id="description"></div>
     <div class="thumbnails" id="marmots"></div>
   </div>
 
@@ -104,7 +99,11 @@
 
       dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
-        const photos = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
+        let photosInfo = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag)
+
+        document.getElementById("description").innerHTML = photosInfo.description;
+
+        const photos = photosInfo.photos.reverse();
         let thumbnailNum = photos.length;
         photoDetailsView.addEventListenerOnLoad(thumbnailNum);
 
@@ -140,3 +139,4 @@
 </body>
 
 </html>
+

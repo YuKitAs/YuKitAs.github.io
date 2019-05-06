@@ -46,7 +46,7 @@ def create_category(cat_name):
     for i in range(1, photos_num + 1):
         new_photos.append(create_photo(i))
 
-    return {'name': cat_name, 'photos': new_photos}
+    return {'name': cat_name, 'description': '', 'photos': new_photos}
 
 
 def append_photos_to_category(category):

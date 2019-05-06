@@ -61,11 +61,7 @@
   </style>
 
   <div class="container">
-    <div class="description">
-    The red fox (<i>Vulpes vulpes</i>) is one of the most widely distributed members of the order <i>Carnivora</i>,
-    being present across the entire Northern Hemisphere from the Arctic Circle to North Africa, North America and Eurasia.
-    </div>
-
+    <div class="description" id="description"></div>
     <div class="thumbnails" id="foxes"></div>
   </div>
 
@@ -103,7 +99,11 @@
 
       dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
-        const photos = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
+        let photosInfo = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag)
+
+        document.getElementById("description").innerHTML = photosInfo.description;
+
+        const photos = photosInfo.photos.reverse();
         let thumbnailNum = photos.length;
         photoDetailsView.addEventListenerOnLoad(thumbnailNum);
 
@@ -139,3 +139,4 @@
 </body>
 
 </html>
+

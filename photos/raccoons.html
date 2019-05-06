@@ -61,12 +61,7 @@
   </style>
 
   <div class="container">
-    <div class="description">
-    The raccoon (<i>Procyon lotor</i>) is a medium-sized, nocturnal, omnivorous mammal and the largest of the family <i>Procyonidae</i> native to North America.
-    From the mid-20th century, raccoons have also been distributed across much of mainland Europe, Caucasus, and Japan.
-    In Germany they are seen as an invasive species.
-    </div>
-
+    <div class="description" id="description"></div>
     <div class="thumbnails" id="raccoons"></div>
   </div>
 
@@ -104,7 +99,11 @@
 
       dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
-        const photos = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
+        let photosInfo = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag)
+
+        document.getElementById("description").innerHTML = photosInfo.description;
+
+        const photos = photosInfo.photos.reverse();
         let thumbnailNum = photos.length;
         photoDetailsView.addEventListenerOnLoad(thumbnailNum);
 
@@ -140,3 +139,4 @@
 </body>
 
 </html>
+

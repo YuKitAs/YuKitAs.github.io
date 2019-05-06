@@ -64,9 +64,7 @@ cat <<_EOF_
   </style>
 
   <div class="container">
-    <div class="description">
-    </div>
-
+    <div class="description" id="description"></div>
     <div class="thumbnails" id="$NAME"></div>
   </div>
 
@@ -104,7 +102,11 @@ cat <<_EOF_
 
       dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
-        const photos = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag).photos.reverse();
+        let photosInfo = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag)
+
+        document.getElementById("description").innerHTML = photosInfo.description;
+
+        const photos = photosInfo.photos.reverse();
         let thumbnailNum = photos.length;
         photoDetailsView.addEventListenerOnLoad(thumbnailNum);
 
