@@ -89,6 +89,7 @@ footer {
 
 .content-container {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .content {
@@ -98,6 +99,11 @@ footer {
   line-height: 1.58;
   font-size: 20px;
   font-family: $font-family-primary;
+}
+
+hr {
+  width: 768px;
+  margin: 20px auto;
 }
 
 .container {
@@ -150,6 +156,11 @@ a:hover {
 
   .content {
     font-size: 18px;
+  }
+
+  hr {
+    width: 80vw;
+    font-size: 16px;
   }
 
   .top-icon {
