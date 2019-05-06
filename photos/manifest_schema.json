@@ -18,6 +18,7 @@
         "title": "The Items Schema",
         "required": [
           "name",
+          "description",
           "photos"
         ],
         "properties": {
@@ -28,6 +29,16 @@
             "default": "",
             "examples": [
               "squirrels"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "description": {
+            "$id": "#/properties/data/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+              ""
             ],
             "pattern": "^(.*)$"
           },

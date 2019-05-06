@@ -2,6 +2,7 @@
   "data": [
     {
       "name": "squirrels",
+      "description": "The red squirrel or Eurasian red squirrel (<i>Sciurus vulgaris</i>) is an arboreal, omnivorous rodent in the genus <i>Sciurus</i> common throughout the forests of Europe and northern Asia. In the UK and Ireland, the population of red squirrels is threatened by the invasive eastern grey squirrels.",
       "photos": [
         {
           "id": 1,
@@ -56,6 +57,7 @@
     },
     {
       "name": "raccoons",
+      "description": "The raccoon (<i>Procyon lotor</i>) is a medium-sized, nocturnal, omnivorous mammal and the largest of the family <i>Procyonidae</i> native to North America. From the mid-20th century, raccoons have also been distributed across much of mainland Europe, Caucasus, and Japan. In Germany they are seen as an invasive species.",
       "photos": [
         {
           "id": 1,
@@ -131,6 +133,7 @@
     },
     {
       "name": "foxes",
+      "description": "The red fox (<i>Vulpes vulpes</i>) is one of the most widely distributed members of the order <i>Carnivora</i>, being present across the entire Northern Hemisphere from the Arctic Circle to North Africa, North America and Eurasia.",
       "photos": [
         {
           "id": 1,
@@ -164,6 +167,7 @@
     },
     {
       "name": "coypus",
+      "description": "The coypu (<i>Myocastor coypus</i>), also known as the nutria or the beaver rat, is a large, herbivorous, semiaquatic rodent originally native to subtropical and temperate South America. The coypu lives in burrows alongside stretches of water, and feeds on river plant stems. In Germany it is considered an invasive species.",
       "photos": [
         {
           "id": 1,
@@ -211,6 +215,7 @@
     },
     {
       "name": "marmots",
+      "description": "Marmots are large squirrels in the genus <i>Marmota</i>, with some species living in mountainous areas such as the Alps. Marmots typically live in burrows, and hibernate there through the winter. Most marmots are highly social and use loud whistles to communicate with one another, especially when alarmed.",
       "photos": [
         {
           "id": 1,
