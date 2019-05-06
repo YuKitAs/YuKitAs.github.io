@@ -11,7 +11,6 @@ parser.add_argument('-l', '--location', default='')
 args = parser.parse_args()
 
 photos_num = args.number
-new_manifest = {}
 
 photo_info = {
     'name': args.name.lower(),
