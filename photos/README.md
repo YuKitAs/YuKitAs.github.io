@@ -52,7 +52,7 @@ The template can be found in `./scripts/html-template.sh`. After modification, r
 $ ./scripts/recreate-all-pages.sh
 ```
 
-## Validate Manifest##
+## Validate Manifest
 
 Make sure `ajv-cli` is installed.
 
