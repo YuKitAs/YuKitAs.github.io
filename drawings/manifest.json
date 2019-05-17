@@ -57,6 +57,11 @@
           "id": 11,
           "name": "smartphone-11",
           "year": "2019"
+        },
+        {
+          "id": 12,
+          "name": "smartphone-12",
+          "year": "2019"
         }
       ]
     },
