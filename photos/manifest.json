@@ -133,7 +133,7 @@
     },
     {
       "name": "foxes",
-      "description": "The red fox (<i>Vulpes vulpes</i>) is one of the most widely distributed members of the order <i>Carnivora</i>, being present across the entire Northern Hemisphere from the Arctic Circle to North Africa, North America and Eurasia.",
+      "description": "The red fox (<i>Vulpes vulpes</i>) is one of the most widely distributed members of the order <i>Carnivora</i>, being present across the entire Northern Hemisphere from the Arctic Circle to North Africa, North America and Eurasia. <br> The Arctic fox (<i>Vulpes lagopus</i>) is a smaller fox native to the Arctic regions of the Northern Hemisphere. It appears in two distinct distinct coat color morphs: white and blue.",
       "photos": [
         {
           "id": 1,
