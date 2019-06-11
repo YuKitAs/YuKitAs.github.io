@@ -162,6 +162,20 @@
           "date": "2018-11-03",
           "location": "Wildpark Schwarze Berge, Germany",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 5,
+          "name": "fox-5",
+          "date": "2019-05-31",
+          "location": "The Arctic Fox Center, Iceland",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 6,
+          "name": "fox-6",
+          "date": "2019-05-31",
+          "location": "The Arctic Fox Center, Iceland",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
