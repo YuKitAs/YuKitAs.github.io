@@ -52,6 +52,27 @@
           "date": "2018-04-07",
           "location": "Karlsruhe, Germany",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 8,
+          "name": "squirrel-8",
+          "date": "2019-09-29",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 9,
+          "name": "squirrel-9",
+          "date": "2019-09-29",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 10,
+          "name": "squirrel-10",
+          "date": "2019-09-29",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
