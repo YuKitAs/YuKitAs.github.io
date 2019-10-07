@@ -170,6 +170,27 @@
           "date": "2018-11-03",
           "location": "Wildpark L\u00fcneburger Heide, Germany",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 11,
+          "name": "raccoon-11",
+          "date": "2019-10-06",
+          "location": "Wildpark Feldkirch, Austria",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 12,
+          "name": "raccoon-12",
+          "date": "2019-10-06",
+          "location": "Wildpark Feldkirch, Austria",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 13,
+          "name": "raccoon-13",
+          "date": "2019-10-06",
+          "location": "Wildpark Feldkirch, Austria",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
