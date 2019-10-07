@@ -335,6 +335,13 @@
           "date": "2019-04-20",
           "location": "Berchtesgaden, Germany",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 7,
+          "name": "marmot-7",
+          "date": "2019-10-06",
+          "location": "Wildpark Feldkirch, Austria",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
