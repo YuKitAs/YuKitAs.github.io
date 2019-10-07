@@ -73,6 +73,27 @@
           "date": "2019-09-29",
           "location": "Karlsruhe, Germany",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 11,
+          "name": "squirrel-11",
+          "date": "2019-10-05",
+          "location": "Arosa, Switzerland",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 12,
+          "name": "squirrel-12",
+          "date": "2019-10-05",
+          "location": "Arosa, Switzerland",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 13,
+          "name": "squirrel-13",
+          "date": "2019-10-05",
+          "location": "Arosa, Switzerland",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
