@@ -62,6 +62,11 @@
           "id": 12,
           "name": "smartphone-12",
           "year": "2019"
+        },
+        {
+          "id": 13,
+          "name": "smartphone-13",
+          "year": "2020"
         }
       ]
     },
@@ -87,6 +92,16 @@
           "id": 4,
           "name": "sketch-4",
           "date": "2014"
+        },
+        {
+          "id": 5,
+          "name": "sketch-5",
+          "date": "2012"
+        },
+        {
+          "id": 6,
+          "name": "sketch-6",
+          "date": "2012"
         }
       ]
     }
