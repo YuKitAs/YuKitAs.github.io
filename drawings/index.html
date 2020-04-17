@@ -84,6 +84,7 @@
 
             let drawingDOM = document.createElement("img");
             drawingDOM.setAttribute("class", "drawing");
+            drawingDOM.setAttribute("title", drawings[i].year);
             let drawingName = `${path}/${tag}/${drawings[i].name}`;
             drawingDOM.setAttribute("src", `${drawingName}.JPG`);
 
