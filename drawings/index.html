@@ -62,7 +62,7 @@
 
   <footer>
     <img class="top-icon" id="top" src="/assets/icons/up-arrow-white.png" onclick="scrollToTop()" />
-    <p>All rights reserved © 2018-2019 YuKitAs</p>
+    <p>All rights reserved © 2018-2020 YuKitAs</p>
   </footer>
 
   <script>
@@ -70,7 +70,7 @@
 
     window.onload = () => {
       renderHeader();
-      
+
       dataLoader.load("drawings").then(metadata => {
         let content = JSON.parse(metadata).content
         JSON.parse(atob(content)).data.forEach(drawingsByTag => {

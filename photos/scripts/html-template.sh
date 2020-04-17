@@ -89,7 +89,7 @@ cat <<_EOF_
   </div>
 
   <footer>
-    <p>All rights reserved © 2018-2019 YuKitAs</p>
+    <p>All rights reserved © 2018-2020 YuKitAs</p>
   </footer>
 
   <script>
