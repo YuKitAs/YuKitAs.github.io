@@ -19,17 +19,17 @@
                     {
                         "drawings": [
                             {
-                                "name": "smartphone-1",
+                                "name": "digital-1",
                                 "year": "2015",
                                 "id": 1
                             },
                             {
-                                "name": "smartphone-2",
+                                "name": "digital-2",
                                 "year": "2015",
                                 "id": 2
                             }
                         ],
-                        "name": "smartphone"
+                        "name": "digital"
                     },
                     {
                         "drawings": [
@@ -60,15 +60,15 @@
                             {
                                 "year": "2015",
                                 "id": 1,
-                                "name": "smartphone-1"
+                                "name": "digital-1"
                             },
                             {
-                                "name": "smartphone-2",
+                                "name": "digital-2",
                                 "year": "2015",
                                 "id": 2
                             }
                         ],
-                        "name": "smartphone"
+                        "name": "digital"
                     },
                     {
                         "drawings": [
@@ -98,7 +98,7 @@
                         "title": "The Name Schema",
                         "default": "",
                         "examples": [
-                            "smartphone"
+                            "digital"
                         ]
                     },
                     "drawings": {
@@ -111,12 +111,12 @@
                                 {
                                     "year": "2015",
                                     "id": 1,
-                                    "name": "smartphone-1"
+                                    "name": "digital-1"
                                 },
                                 {
                                     "year": "2015",
                                     "id": 2,
-                                    "name": "smartphone-2"
+                                    "name": "digital-2"
                                 }
                             ]
                         ],
@@ -130,12 +130,12 @@
                                 {
                                     "year": "2015",
                                     "id": 1,
-                                    "name": "smartphone-1"
+                                    "name": "digital-1"
                                 },
                                 {
                                     "year": "2015",
                                     "id": 2,
-                                    "name": "smartphone-2"
+                                    "name": "digital-2"
                                 }
                             ],
                             "additionalProperties": true,
@@ -161,7 +161,7 @@
                                     "title": "The Name Schema",
                                     "default": "",
                                     "examples": [
-                                        "smartphone-1"
+                                        "digital-1"
                                     ]
                                 },
                                 "year": {

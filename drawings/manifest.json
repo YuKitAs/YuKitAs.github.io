@@ -1,71 +1,71 @@
 {
   "data": [
     {
-      "name": "smartphone",
+      "name": "digital",
       "drawings": [
         {
           "id": 1,
-          "name": "smartphone-1",
+          "name": "digital-1",
           "year": "2015"
         },
         {
           "id": 2,
-          "name": "smartphone-2",
+          "name": "digital-2",
           "year": "2015"
         },
         {
           "id": 3,
-          "name": "smartphone-3",
+          "name": "digital-3",
           "year": "2016"
         },
         {
           "id": 4,
-          "name": "smartphone-4",
+          "name": "digital-4",
           "year": "2016"
         },
         {
           "id": 5,
-          "name": "smartphone-5",
+          "name": "digital-5",
           "year": "2016"
         },
         {
           "id": 6,
-          "name": "smartphone-6",
+          "name": "digital-6",
           "year": "2016"
         },
         {
           "id": 7,
-          "name": "smartphone-7",
+          "name": "digital-7",
           "year": "2016"
         },
         {
           "id": 8,
-          "name": "smartphone-8",
+          "name": "digital-8",
           "year": "2017"
         },
         {
           "id": 9,
-          "name": "smartphone-9",
+          "name": "digital-9",
           "year": "2018"
         },
         {
           "id": 10,
-          "name": "smartphone-10",
+          "name": "digital-10",
           "year": "2018"
         },
         {
           "id": 11,
-          "name": "smartphone-11",
+          "name": "digital-11",
           "year": "2019"
         },
         {
           "id": 12,
-          "name": "smartphone-12",
+          "name": "digital-12",
           "year": "2019"
         },
         {
           "id": 13,
-          "name": "smartphone-13",
+          "name": "digital-13",
           "year": "2020"
         }
       ]
