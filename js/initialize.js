@@ -14,6 +14,16 @@ function renderHomeImage() {
   document.body.innerHTML += `<img class="home after" id="home-after" src="/assets/images/home-after.png" alt="" />`;
 }
 
+function renderUpArrow() {
+  document.body.innerHTML += `<img class="top-icon" id="top" src="/assets/icons/up-arrow-white.png" onclick="scrollToTop()" />`;
+}
+
+function renderFooter() {
+  document.body.innerHTML += `<footer>
+                                <p>All rights reserved © 2018-2020 YuKitAs</p>
+                              </footer>`;
+}
+
 function _greet() {
   let hour = new Date().getHours();
   let greet = (hour >= 6 && hour <= 18) ? "Konnichiwa" : "Konbanwa";

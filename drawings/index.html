@@ -60,16 +60,13 @@
     <div class="drawings"></div>
   </div>
 
-  <footer>
-    <img class="top-icon" id="top" src="/assets/icons/up-arrow-white.png" onclick="scrollToTop()" />
-    <p>All rights reserved © 2018-2020 YuKitAs</p>
-  </footer>
-
   <script>
     var path = "https://raw.githubusercontent.com/YuKitAs/YuKitAs.github.io/master/drawings/resources";
 
     window.onload = () => {
       renderHeader();
+      renderUpArrow();
+      renderFooter();
 
       dataLoader.load("drawings").then(metadata => {
         let content = JSON.parse(metadata).content
