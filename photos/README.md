@@ -54,7 +54,7 @@ $ ./scripts/recreate-all-pages.sh
 
 ## Validate Manifest
 
-Make sure `ajv-cli` is installed.
+Make sure `ajv-cli` is installed and run:
 
 ```console
 $ ajv -s manifest_schema.json -d manifest.json

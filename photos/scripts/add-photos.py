@@ -19,6 +19,7 @@ photo_info = {
     'camera': 'Canon EOS 60D'
 }
 
+MANIFEST_FILE = 'manifest.json'
 
 def get_plural(singular):
     with open('singular2plural') as mapping_file:
@@ -62,11 +63,11 @@ if __name__ == '__main__':
     if not plural_name:
         exit(0)
 
-    with open('manifest.json') as manifest_file:
-        with open('manifest.json.backup', 'w+') as backup_file:
+    with open(MANIFEST_FILE) as manifest_file:
+        with open(MANIFEST_FILE + '.backup', 'w+') as backup_file:
             backup_file.write(manifest_file.read())
 
-    with open('manifest.json') as manifest_file:
+    with open(MANIFEST_FILE) as manifest_file:
         manifest = json.load(manifest_file)
 
     data = manifest['data']
@@ -83,5 +84,5 @@ if __name__ == '__main__':
     manifest['data'] = data
     print(json.dumps(manifest, indent=2))
 
-    with open('manifest.json', 'w+') as new_manifest_file:
+    with open(MANIFEST_FILE, 'w+') as new_manifest_file:
         json.dump(manifest, new_manifest_file, indent=2)
