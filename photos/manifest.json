@@ -94,6 +94,13 @@
           "date": "2019-10-05",
           "location": "Arosa, Switzerland",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 14,
+          "name": "squirrel-14",
+          "date": "2020-02-02",
+          "location": "N\u00f6rdlingen, Germany",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
