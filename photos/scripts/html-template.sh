@@ -17,6 +17,7 @@ cat <<_EOF_
   <link rel="manifest" href="/site.webmanifest">
   <script src="/js/initialize.js"></script>
   <script src="/js/data_loader.js"></script>
+  <script src="/js/utils.js"></script>
   <script src="photo_details_view.js"></script>
   <title id="title"></title>
 </head>
@@ -102,7 +103,7 @@ cat <<_EOF_
 
       dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
-        let photosInfo = JSON.parse(atob(content)).data.find(photosByTag => photosByTag.name === tag)
+        let photosInfo = JSON.parse(b64DecodeUnicode(content)).data.find(photosByTag => photosByTag.name === tag)
 
         document.getElementById("description").innerHTML = photosInfo.description;
 
