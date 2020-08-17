@@ -399,6 +399,54 @@
           "camera": "Canon EOS 60D"
         }
       ]
+    },
+    {
+      "name": "bears",
+      "description": "",
+      "photos": [
+        {
+          "id": 1,
+          "name": "bear-1",
+          "date": "2020-08-16",
+          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 2,
+          "name": "bear-2",
+          "date": "2020-08-16",
+          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 3,
+          "name": "bear-3",
+          "date": "2020-08-16",
+          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 4,
+          "name": "bear-4",
+          "date": "2020-08-16",
+          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 5,
+          "name": "bear-5",
+          "date": "2020-08-16",
+          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 6,
+          "name": "bear-6",
+          "date": "2020-08-16",
+          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "camera": "Canon EOS 60D"
+        }
+      ]
     }
   ]
 }
