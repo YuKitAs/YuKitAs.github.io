@@ -164,7 +164,7 @@
 
         let thumbnailDOM = document.createElement("img");
         thumbnailDOM.setAttribute("class", "thumbnail");
-        let thumbnailName = `${photoPath}/${tag}/${photos[i].name}`;
+        let thumbnailName = `${photoPath}/${tag}/${photos[i].name}-thumbnail`;
         thumbnailDOM.setAttribute("src", `${thumbnailName}.jpg`);
         thumbnailDOM.onclick = () => photoDetailsView.display(tag, photos, i);
 
