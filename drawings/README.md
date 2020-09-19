@@ -2,7 +2,7 @@
 
 ## Adding Drawings
 
-1. Add new drawings into `drawings/resources/{sketch, digital}` with proper size.
+1. Add new drawings into `drawings/resources/{sketch,digital}` with proper size.
 
 2. Run the following script to update `manifest.json`:
 
@@ -10,7 +10,7 @@
   $ scripts/add-drawings.py
   ```
 
-  The default year is the current year, update it manually if needed.
+  The default `year` is the current year, update it manually if needed.
 
 ## Validate Manifest
 
