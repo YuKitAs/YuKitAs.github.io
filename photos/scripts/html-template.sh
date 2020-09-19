@@ -121,7 +121,7 @@ cat <<_EOF_
 
           let thumbnailDOM = document.createElement("img");
           thumbnailDOM.setAttribute("class", "thumbnail");
-          let thumbnailName = "resources/" + tag + "/" + photos[i].name;
+          let thumbnailName = `resources/${tag}/${photos[i].name}-thumbnail.jpg`;
           thumbnailDOM.setAttribute("src", thumbnailName + ".jpg");
           thumbnailDOM.onclick = () => photoDetailsView.display(tag, photos, i);
 

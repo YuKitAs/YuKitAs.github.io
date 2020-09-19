@@ -1,39 +1,50 @@
 # README
 
+
+* `name_pl`: the plural form of category name, e.g. "squirrels"
+* `name_sing`: the singular form of category name, e.g. "squirrel"
+
 ## Adding Photos to an Existing Category
 
 1. **Add new resources**
 
-    Copy `.jpg` photos into `photos/resources/<name>` (`*-raw.jpg`: 800x600; `*.jpg`: 250x250).
+    Copy `.jpg` photos into `photos/resources/<name_pl>` (`<name_sing>-<id>.jpg`: 800x600; `*<name_sing>-<id>-thumbnail.jpg`: 250x250; case-sensitive).
 
 2. **Update manifest**
 
     Run the `add-photos.py` script to append a specified number of photos for the category into the manifest:
 
     ```console
-    $ scripts/add-photos.py <number> -n <name> -d <date> -l <location>
+    $ scripts/add-photos.py <number> -n <name_sing> -d <date> -l <location>
     ```
-    `number` (_required_) should be an positive integer; `name` (_required_) should be singluar, e.g. "fox"; `date` should be in format `yyyy-mm-dd`, e.g."2016-03-13"; an example for `location` is "Karlsruhe, Germany".
+
+    * `number`: required, an positive integer
+    * `name_sing`: required
+    * `date`: in format `yyyy-mm-dd`, e.g. "2016-03-13"
+    * `location`: e.g. "Karlsruhe, Germany"
 
 ## Adding Photos for an New Category
 
 1. **Add new resources**
 
-    Copy `.jpg` photos into `photos/resources/<name>` (`*-raw.jpg`: 800x600; `*.jpg`: 250x250).
+    Copy `.jpg` photos into `photos/resources/<name_pl>` (`<name_sing>-<id>.jpg`: 800x600; `*<name_sing>-<id>-thumbnail.jpg`: 250x250; case-sensitive).
 
 2. **Update manifest**
 
-    A singular to plural mapping must be added into `singular2plural`, e.g. "bonbon,bonbons".
+    A singular to plural mapping must be added into `singular2plural` separated by comma: `<name_sing>,<name_pl>`.
 
     Run the `add-photos.py` script to create a new category in the manifest together with a specified number of photos:
 
     ```console
-    $ scripts/add-photos.py <number> -n <name> -d <date> -l <location>
+    $ scripts/add-photos.py <number> -n <name_sing> -d <date> -l <location>
     ```
 
-    `number` should be an positive integer; `name` should be singluar, e.g. "bon"; `date` should be in format `yyyy-mm-dd`, e.g."2016-03-13"; an example for `location` is "Karlsruhe, Germany".
+    * `number`: required, an positive integer
+    * `name_sing`: required
+    * `date`: in format `yyyy-mm-dd`, e.g. "2016-03-13"
+    * `location`: e.g. "Karlsruhe, Germany"
 
-    The field `description` in the generated `manifest.json` is a HTML string that can be manually updated.
+    The field `description` in the generated `manifest.json` is a HTML string that can/should be manually updated.
 
 3. **Create a HTML page**
 

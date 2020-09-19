@@ -101,6 +101,20 @@
           "date": "2020-02-02",
           "location": "N\u00f6rdlingen, Germany",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 15,
+          "name": "squirrel-15",
+          "date": "2020-09-19",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 16,
+          "name": "squirrel-16",
+          "date": "2020-09-19",
+          "location": "Karlsruhe, Germany",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
@@ -408,42 +422,42 @@
           "id": 1,
           "name": "bear-1",
           "date": "2020-08-16",
-          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "location": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 2,
           "name": "bear-2",
           "date": "2020-08-16",
-          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "location": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 3,
           "name": "bear-3",
           "date": "2020-08-16",
-          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "location": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 4,
           "name": "bear-4",
           "date": "2020-08-16",
-          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "location": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 5,
           "name": "bear-5",
           "date": "2020-08-16",
-          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "location": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 6,
           "name": "bear-6",
           "date": "2020-08-16",
-          "location": "Alternativer Wolf- und Bärenpark Schwarzwald",
+          "location": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
           "camera": "Canon EOS 60D"
         }
       ]

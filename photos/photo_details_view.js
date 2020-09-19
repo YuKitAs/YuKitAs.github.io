@@ -45,7 +45,7 @@ var photoDetailsView = {
   _setOriginalPhoto() {
     let photos = this.currentPhotos;
     let i = this.currentIndex;
-    document.querySelector("#original-photo").setAttribute("src", `resources/${this.currentTag}/${photos[i].name}-raw.jpg`);
+    document.querySelector("#original-photo").setAttribute("src", `resources/${this.currentTag}/${photos[i].name}.jpg`);
 
     let dateFormat = {
       year: "numeric",
