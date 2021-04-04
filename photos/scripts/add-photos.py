@@ -8,6 +8,7 @@ parser.add_argument('number', type=int)
 parser.add_argument('-n', '--name', required=True)
 parser.add_argument('-d', '--date', default='')
 parser.add_argument('-l', '--location', default='')
+parser.add_argument('-c', '--camera', default='Canon EOS 60D')
 args = parser.parse_args()
 
 photos_num = args.number
@@ -16,7 +17,7 @@ photo_info = {
     'name': args.name.lower(),
     'date': args.date,
     'location': args.location,
-    'camera': 'Canon EOS 60D'
+    'camera': args.camera
 }
 
 MANIFEST_FILE = 'manifest.json'
@@ -52,8 +53,10 @@ def create_category(cat_name):
 
 def append_photos_to_category(category):
     num = len(category['photos'])
+    print('Existing photos: {}'.format(num))
     for i in range(num + 1, num + photos_num + 1):
-        category['photos'].append(create_photo(i))
+        last_index = category['photos'][-1]['id']
+        category['photos'].append(create_photo(last_index + 1))
 
     return category
 
@@ -76,13 +79,14 @@ if __name__ == '__main__':
         if cat['name'] == plural_name:
             print('Adding to existing category "{}"...'.format(plural_name))
             cat = append_photos_to_category(cat)
+            print(json.dumps(cat, indent=2))
             break
     else:
         print('Creating new category "{}"...'.format(plural_name))
         data.append(create_category(plural_name))
+        print(json.dumps(data[-1], indent=2))
 
     manifest['data'] = data
-    print(json.dumps(manifest, indent=2))
 
     with open(MANIFEST_FILE, 'w+') as new_manifest_file:
         json.dump(manifest, new_manifest_file, indent=2)
