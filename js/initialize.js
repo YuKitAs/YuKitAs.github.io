@@ -20,7 +20,7 @@ function renderUpArrow() {
 
 function renderFooter() {
   document.body.innerHTML += `<footer>
-                                <p>All rights reserved © 2018-2020 YuKitAs</p>
+                                <p>All rights reserved © 2018-${new Date().getFullYear()} YuKitAs</p>
                               </footer>`;
 }
 

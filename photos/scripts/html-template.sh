@@ -89,10 +89,6 @@ cat <<_EOF_
     <img class="arrow right" id="right" src="/assets/icons/right-arrow.svg" />
   </div>
 
-  <footer>
-    <p>All rights reserved © 2018-2020 YuKitAs</p>
-  </footer>
-
   <script>
     var tag = "$NAME";
 
@@ -100,6 +96,7 @@ cat <<_EOF_
 
     window.onload = () => {
       renderHeader();
+      renderFooter();
 
       dataLoader.load("photos").then(metadata => {
         let content = JSON.parse(metadata).content
