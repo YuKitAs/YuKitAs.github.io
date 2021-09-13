@@ -260,6 +260,13 @@
           "date": "2019-05-31",
           "location": "The Arctic Fox Center, Iceland",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 7,
+          "name": "fox-7",
+          "date": "2021-09-11",
+          "location": "Wildparadies Tripsdrill",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
