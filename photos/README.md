@@ -51,9 +51,8 @@
     Run the `create-page.sh` script to generate a HTML file for the new category which can be browsed at `/photos/<name>`:
 
     ```console
-    $ ./scripts/create-page.sh <name>
+    $ ./scripts/create-page.sh <name_pl>
     ```
-    `name` should be plural, e.g. "squirrels".
 
 ## Modifying HTML Template
 
