@@ -468,6 +468,40 @@
           "camera": "Canon EOS 60D"
         }
       ]
+    },
+    {
+      "name": "otters",
+      "description": "",
+      "photos": [
+        {
+          "id": 1,
+          "name": "otter-1",
+          "date": "2021-09-11",
+          "location": "Wildparadies Tripsdrill",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 2,
+          "name": "otter-2",
+          "date": "2021-09-11",
+          "location": "Wildparadies Tripsdrill",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 3,
+          "name": "otter-3",
+          "date": "2021-09-11",
+          "location": "Wildparadies Tripsdrill",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 4,
+          "name": "otter-4",
+          "date": "2021-09-11",
+          "location": "Wildparadies Tripsdrill",
+          "camera": "Canon EOS 60D"
+        }
+      ]
     }
   ]
 }
