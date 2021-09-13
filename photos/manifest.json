@@ -466,6 +466,20 @@
           "date": "2020-08-16",
           "location": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 7,
+          "name": "bear-7",
+          "date": "2021-09-11",
+          "location": "Wildparadies Tripsdrill",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 8,
+          "name": "bear-8",
+          "date": "2021-09-11",
+          "location": "Wildparadies Tripsdrill",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
