@@ -1,58 +1,48 @@
 # README
 
+**Terms**
 
-* `name_pl`: the plural form of category name, e.g. "squirrels"
-* `name_sing`: the singular form of category name, e.g. "squirrel"
+* `id`: an auto-increment numeric id for each photo in a category
+* `cat_name`: the plural form of the category, e.g. "squirrels"
+* `photo_name`: the singular form of the category, e.g. "squirrel"
+
+## Adding New Photos
+
+Copy `.jpg` files into `photos/resources/<cat_name>` (`<photo_name>-<id>.jpg`: 800x600; `*<photo_name>-<id>-thumbnail.jpg`: 250x250; case-sensitive).
 
 ## Adding Photos to an Existing Category
 
-1. **Add new resources**
+### Update manifest
 
-    Copy `.jpg` photos into `photos/resources/<name_pl>` (`<name_sing>-<id>.jpg`: 800x600; `*<name_sing>-<id>-thumbnail.jpg`: 250x250; case-sensitive).
+Run the `add-photos.py` script to append a specified number of photos for the category into the manifest:
 
-2. **Update manifest**
+```console
+$ scripts/add-photos.py <photo_name> -n <number> -d <date> -l <location>
+```
 
-    Run the `add-photos.py` script to append a specified number of photos for the category into the manifest:
-
-    ```console
-    $ scripts/add-photos.py <number> -n <name_sing> -d <date> -l <location>
-    ```
-
-    * `number`: required, an positive integer
-    * `name_sing`: required
-    * `date`: in format `yyyy-mm-dd`, e.g. "2016-03-13"
-    * `location`: e.g. "Karlsruhe, Germany"
+* `photo_name`: required
+* `number`: optional, an positive integer; if not specified, all the new photos will be added.
+* `date`: in format `yyyy-mm-dd`, e.g. "2016-03-13".
+* `location`: e.g. "Karlsruhe, Germany".
 
 ## Adding Photos for an New Category
 
-1. **Add new resources**
+### Update manifest
 
-    Copy `.jpg` photos into `photos/resources/<name_pl>` (`<name_sing>-<id>.jpg`: 800x600; `*<name_sing>-<id>-thumbnail.jpg`: 250x250; case-sensitive).
+A singular to plural mapping must be added into `singular2plural` separated by comma: `<photo_name>,<cat_name>`.
 
-2. **Update manifest**
+Run the `add-photos.py` script to create a new category in the manifest, the parameters are the same as above.
 
-    A singular to plural mapping must be added into `singular2plural` separated by comma: `<name_sing>,<name_pl>`.
 
-    Run the `add-photos.py` script to create a new category in the manifest together with a specified number of photos:
+The field `description` in the generated `manifest.json` is a HTML string that can/should be manually updated.
 
-    ```console
-    $ scripts/add-photos.py <number> -n <name_sing> -d <date> -l <location>
-    ```
+### Create a HTML page
 
-    * `number`: required, an positive integer
-    * `name_sing`: required
-    * `date`: in format `yyyy-mm-dd`, e.g. "2016-03-13"
-    * `location`: e.g. "Karlsruhe, Germany"
+Run the `create-page.sh` script to generate a HTML file `<cat_name>.html` in the current directory for the new category:
 
-    The field `description` in the generated `manifest.json` is a HTML string that can/should be manually updated.
-
-3. **Create a HTML page**
-
-    Run the `create-page.sh` script to generate a HTML file for the new category which can be browsed at `/photos/<name>`:
-
-    ```console
-    $ ./scripts/create-page.sh <name_pl>
-    ```
+```console
+$ ./scripts/create-page.sh <cat_name>
+```
 
 ## Modifying HTML Template
 
