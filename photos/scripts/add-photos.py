@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 
+# Update manifest.json according to (locally) existing category directory and photos.
+
 import argparse
 import json
+import os
+import re
 
 parser = argparse.ArgumentParser()
-parser.add_argument('number', type=int)
-parser.add_argument('-n', '--name', required=True)
+parser.add_argument('name', type=str)
+parser.add_argument('-n', '--number', type=int, default=0)
 parser.add_argument('-d', '--date', default='')
 parser.add_argument('-l', '--location', default='')
 parser.add_argument('-c', '--camera', default='Canon EOS 60D')
 args = parser.parse_args()
-
-photos_num = args.number
 
 photo_info = {
     'name': args.name.lower(),
@@ -21,6 +23,7 @@ photo_info = {
 }
 
 MANIFEST_FILE = 'manifest.json'
+
 
 def get_plural(singular):
     with open('singular2plural') as mapping_file:
@@ -38,23 +41,37 @@ def get_plural(singular):
     return mappings[singular]
 
 
-def create_photo(id):
-    return {'id': id, 'name': '{}-{}'.format(photo_info['name'], id), 'date': photo_info['date'],
+PHOTO_NAME = photo_info['name']
+CAT_NAME = get_plural(PHOTO_NAME)
+
+
+def get_all_photos_num():
+    # count photo files named like 'squirrel-42.jpg'
+    photos = list(filter(lambda f: re.findall('^{}-[1-9][0-9]*\\..*$'.format(PHOTO_NAME), f),
+                         os.listdir(os.path.join(os.getcwd(), 'resources', CAT_NAME))))
+    return len(photos)
+
+
+def create_photo(numeric_id):
+    return {'id': numeric_id, 'name': '{}-{}'.format(photo_info['name'], numeric_id), 'date': photo_info['date'],
             'location': photo_info['location'], 'camera': photo_info['camera']}
 
 
-def create_category(cat_name):
+def create_category():
     new_photos = []
-    for i in range(1, photos_num + 1):
+    new_photos_num = args.number if args.number > 0 else get_all_photos_num()
+    for i in range(1, new_photos_num + 1):
         new_photos.append(create_photo(i))
 
-    return {'name': cat_name, 'description': '', 'photos': new_photos}
+    return {'name': CAT_NAME, 'description': '', 'photos': new_photos}
 
 
 def append_photos_to_category(category):
     num = len(category['photos'])
     print('Existing photos: {}'.format(num))
-    for i in range(num + 1, num + photos_num + 1):
+    new_photos_num = args.number if args.number > 0 else (get_all_photos_num() - num)
+    print('Adding new photos: {}'.format(new_photos_num))
+    for i in range(num + 1, num + new_photos_num + 1):
         last_index = category['photos'][-1]['id']
         category['photos'].append(create_photo(last_index + 1))
 
@@ -62,8 +79,7 @@ def append_photos_to_category(category):
 
 
 if __name__ == '__main__':
-    plural_name = get_plural(photo_info['name'])
-    if not plural_name:
+    if not CAT_NAME:
         exit(0)
 
     with open(MANIFEST_FILE) as manifest_file:
@@ -76,14 +92,14 @@ if __name__ == '__main__':
     data = manifest['data']
 
     for cat in data:
-        if cat['name'] == plural_name:
-            print('Adding to existing category "{}"...'.format(plural_name))
+        if cat['name'] == CAT_NAME:
+            print('Adding to existing category "{}"...'.format(CAT_NAME))
             cat = append_photos_to_category(cat)
             print(json.dumps(cat, indent=2))
             break
     else:
-        print('Creating new category "{}"...'.format(plural_name))
-        data.append(create_category(plural_name))
+        print('Creating new category "{}"...'.format(CAT_NAME))
+        data.append(create_category(CAT_NAME))
         print(json.dumps(data[-1], indent=2))
 
     manifest['data'] = data
