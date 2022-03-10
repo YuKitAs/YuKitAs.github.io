@@ -13,6 +13,7 @@ parser.add_argument('-n', '--number', type=int, default=0)
 parser.add_argument('-d', '--date', default='')
 parser.add_argument('-l', '--location', default='')
 parser.add_argument('-c', '--camera', default='Canon EOS 60D')
+parser.add_argument('--dryrun', action='store_true', default=False)
 args = parser.parse_args()
 
 photo_info = {
@@ -21,6 +22,8 @@ photo_info = {
     'location': args.location,
     'camera': args.camera
 }
+
+dryrun = args.dryrun
 
 MANIFEST_FILE = 'manifest.json'
 
@@ -60,6 +63,7 @@ def create_photo(numeric_id):
 def create_category():
     new_photos = []
     new_photos_num = args.number if args.number > 0 else get_all_photos_num()
+    print('Adding new photos: {}'.format(new_photos_num))
     for i in range(1, new_photos_num + 1):
         new_photos.append(create_photo(i))
 
@@ -99,10 +103,11 @@ if __name__ == '__main__':
             break
     else:
         print('Creating new category "{}"...'.format(CAT_NAME))
-        data.append(create_category(CAT_NAME))
+        data.append(create_category())
         print(json.dumps(data[-1], indent=2))
 
-    manifest['data'] = data
+    if not dryrun:
+        manifest['data'] = data
 
-    with open(MANIFEST_FILE, 'w+') as new_manifest_file:
-        json.dump(manifest, new_manifest_file, indent=2)
+        with open(MANIFEST_FILE, 'w+') as new_manifest_file:
+            json.dump(manifest, new_manifest_file, indent=2)
