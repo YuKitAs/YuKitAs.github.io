@@ -103,12 +103,13 @@
         let content = JSON.parse(metadata).content;
         let data = JSON.parse(atob(content)).data;
 
-        // load first three categories
-        data.slice(0, 3).forEach(photosByTag => {
+        // load first N categories
+        const catNum = _caculateInitialCategoryNumber();
+        data.slice(0, catNum).forEach(photosByTag => {
           container.appendChild(_createCategoryDOM(photosByTag));
         });
 
-        let loaded = 3;
+        let loaded = catNum;
         window.onscroll = () => {
           const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
           document.querySelector("#top").style.visibility = scrollTop > 100 ? "visible" : "hidden";
@@ -117,9 +118,9 @@
             return;
           }
 
-          for (let i = 3; i < data.length; i += 3) {
+          for (let i = catNum; i < data.length; i += catNum) {
             if (container.scrollHeight >= document.body.clientHeight - window.innerHeight) {
-              data.slice(i, i + 3).forEach(photosByTag => {
+              data.slice(i, i + catNum).forEach(photosByTag => {
                 container.appendChild(_createCategoryDOM(photosByTag));
                 loaded++;
               });
@@ -136,6 +137,11 @@
         photoDetailsView.hide();
       }
     };
+
+    function _caculateInitialCategoryNumber() {
+      // display more categories so that the page is always scrollable initially
+      return Math.ceil((window.innerHeight - 150) / 300);
+    }
 
     function _createCategoryDOM(photosByTag) {
       let categoryDOM = document.createElement("div");
