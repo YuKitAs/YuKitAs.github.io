@@ -309,6 +309,13 @@
           "date": "2021-09-11",
           "location": "Wildparadies Tripsdrill",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 8,
+          "name": "fox-8",
+          "date": "2024-08-10",
+          "location": "Schwarzwaldzoo Waldkirch, Germany",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
