@@ -375,42 +375,42 @@
           "id": 1,
           "name": "marmot-1",
           "date": "2019-04-20",
-          "location": "Berchtesgaden, Germany",
+          "location": "Nationalpark Berchtesgaden, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 2,
           "name": "marmot-2",
           "date": "2019-04-20",
-          "location": "Berchtesgaden, Germany",
+          "location": "Nationalpark Berchtesgaden, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 3,
           "name": "marmot-3",
           "date": "2019-04-20",
-          "location": "Berchtesgaden, Germany",
+          "location": "Nationalpark Berchtesgaden, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 4,
           "name": "marmot-4",
           "date": "2019-04-20",
-          "location": "Berchtesgaden, Germany",
+          "location": "Nationalpark Berchtesgaden, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 5,
           "name": "marmot-5",
           "date": "2019-04-20",
-          "location": "Berchtesgaden, Germany",
+          "location": "Nationalpark Berchtesgaden, Germany",
           "camera": "Canon EOS 60D"
         },
         {
           "id": 6,
           "name": "marmot-6",
           "date": "2019-04-20",
-          "location": "Berchtesgaden, Germany",
+          "location": "Nationalpark Berchtesgaden, Germany",
           "camera": "Canon EOS 60D"
         },
         {
@@ -418,6 +418,76 @@
           "name": "marmot-7",
           "date": "2019-10-06",
           "location": "Wildpark Feldkirch, Austria",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 8,
+          "name": "marmot-8",
+          "date": "2025-05-02",
+          "location": "Nationalpark Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 9,
+          "name": "marmot-9",
+          "date": "2025-05-02",
+          "location": "Nationalpark Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 10,
+          "name": "marmot-10",
+          "date": "2025-05-02",
+          "location": "Nationalpark Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 11,
+          "name": "marmot-11",
+          "date": "2025-05-02",
+          "location": "Nationalpark Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 12,
+          "name": "marmot-12",
+          "date": "2025-05-02",
+          "location": "Nationalpark Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 12,
+          "name": "marmot-12",
+          "date": "2025-05-02",
+          "location": "Nationalpark Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 13,
+          "name": "marmot-13",
+          "date": "2025-05-02",
+          "location": "Nationalpark Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 14,
+          "name": "marmot-14",
+          "date": "2025-05-02",
+          "location": "Nationalpark Berchtesgaden, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 15,
+          "name": "marmot-15",
+          "date": "2025-05-03",
+          "location": "Adlergehege Obersalzberg, Germany",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 16,
+          "name": "marmot-16",
+          "date": "2025-05-03",
+          "location": "Adlergehege Obersalzberg, Germany",
           "camera": "Canon EOS 60D"
         }
       ]
