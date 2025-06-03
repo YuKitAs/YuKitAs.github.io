@@ -599,6 +599,27 @@
           "date": "2021-09-11",
           "location": "Wildparadies Tripsdrill",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 9,
+          "name": "bear-9",
+          "date": "2025-05-31",
+          "location": "ZOOM Erlebniswelt Gelsenkirchen",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 10,
+          "name": "bear-10",
+          "date": "2025-05-31",
+          "location": "ZOOM Erlebniswelt Gelsenkirchen",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 11,
+          "name": "bear-9",
+          "date": "2025-05-31",
+          "location": "ZOOM Erlebniswelt Gelsenkirchen",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
