@@ -655,6 +655,27 @@
           "date": "2025-05-31",
           "location": "ZOOM Erlebniswelt Gelsenkirchen",
           "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 12,
+          "name": "bear-12",
+          "date": "2025-09-20",
+          "location": "Arosa, Switzerland",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 13,
+          "name": "bear-13",
+          "date": "2025-09-20",
+          "location": "Arosa, Switzerland",
+          "camera": "Canon EOS 60D"
+        },
+        {
+          "id": 14,
+          "name": "bear-14",
+          "date": "2025-10-03",
+          "location": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
+          "camera": "Canon EOS 60D"
         }
       ]
     },
